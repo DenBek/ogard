@@ -1,0 +1,35 @@
+{
+  "crosswalk_id": "ogard-indicative-cim-crosswalk-v0.1",
+  "status": "non_normative_incomplete",
+  "claim_boundary": "This crosswalk does not establish formal CIM equivalence, profile conformance, compliance, or certification.",
+  "mappings": [
+    {
+      "ogard_concept": "CanonicalAsset",
+      "indicative_cim_family": "PowerSystemResource and related asset context"
+    },
+    {
+      "ogard_concept": "FunctionalLocation",
+      "indicative_cim_family": "Location, EquipmentContainer, and local hierarchy concepts"
+    },
+    {
+      "ogard_concept": "EquipmentUnit",
+      "indicative_cim_family": "Equipment and Asset-related concepts"
+    },
+    {
+      "ogard_concept": "AssetInstallation",
+      "indicative_cim_family": "Time-valid relationship assembled from asset, equipment, and location information"
+    },
+    {
+      "ogard_concept": "TelemetryChannel",
+      "indicative_cim_family": "Measurement and MeasurementValue-related concepts"
+    },
+    {
+      "ogard_concept": "EvidenceRecord",
+      "indicative_cim_family": "No single direct equivalent"
+    },
+    {
+      "ogard_concept": "MappingDecision / Contradiction",
+      "indicative_cim_family": "No single direct equivalent"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "example_id": "ogard-transformer-worked-example-v0.1",
+  "events": [
+    {
+      "event_id": "AUD-001",
+      "event_type": "evidence_ingested",
+      "record_id": "EV-WO-2026-0512",
+      "timestamp": "2026-05-12T10:02:15Z",
+      "model_profile_version": "ogard-model-profile-v0.1",
+      "schema_version": "0.1"
+    },
+    {
+      "event_id": "AUD-002",
+      "event_type": "functional_location_mapping_accepted",
+      "record_id": "MD-WO-2026-0512",
+      "rule_id": "RULE-FL-EXACT-001",
+      "timestamp": "2026-05-12T10:12:00Z",
+      "model_profile_version": "ogard-model-profile-v0.1",
+      "schema_version": "0.1"
+    },
+    {
+      "event_id": "AUD-003",
+      "event_type": "equipment_candidate_routed_to_review",
+      "record_id": "MD-WO-2026-0512",
+      "candidate_equipment_unit_id": "EQ-TR-NEW-01",
+      "score": 0.78,
+      "timestamp": "2026-05-12T10:12:00Z",
+      "model_profile_version": "ogard-model-profile-v0.1",
+      "schema_version": "0.1"
+    },
+    {
+      "event_id": "AUD-004",
+      "event_type": "review_candidate_accepted",
+      "record_id": "RA-WO-2026-0512",
+      "accepted_equipment_unit_id": "EQ-TR-NEW-01",
+      "timestamp": "2026-05-12T10:20:00Z",
+      "model_profile_version": "ogard-model-profile-v0.1",
+      "schema_version": "0.1"
+    },
+    {
+      "event_id": "AUD-005",
+      "event_type": "contradiction_created",
+      "record_id": "CON-TELEM-STALE-001",
+      "rule_id": "RULE-TELEM-STALE-002",
+      "timestamp": "2026-05-12T10:22:00Z",
+      "model_profile_version": "ogard-model-profile-v0.1",
+      "schema_version": "0.1"
+    },
+    {
+      "event_id": "AUD-006",
+      "event_type": "derived_status_recorded",
+      "record_id": "STATUS-ASSET-NE-SUB114-TX02-20260512",
+      "status": "unknown",
+      "rule_id": "RULE-STATUS-CONTRADICTION-001",
+      "timestamp": "2026-05-12T10:22:00Z",
+      "model_profile_version": "ogard-model-profile-v0.1",
+      "schema_version": "0.1"
+    }
+  ],
+  "model_profile_version": "ogard-model-profile-v0.1",
+  "schema_version": "0.1"
+}

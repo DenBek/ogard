@@ -1,0 +1,22 @@
+{
+  "status_id": "STATUS-ASSET-NE-SUB114-TX02-20260512",
+  "asset_id": "ASSET-NE-SUB114-TX02",
+  "status": "unknown",
+  "effective_from": "2026-05-12T10:22:00Z",
+  "rule_id": "RULE-STATUS-CONTRADICTION-001",
+  "rule_version": "0.1",
+  "reason": "A material unresolved contradiction affects telemetry identity. OGARD does not infer physical condition or availability while the supporting evidence remains materially disputed.",
+  "supporting_evidence_record_ids": [
+    "EV-WO-2026-0512",
+    "EV-AR-0047719",
+    "EV-INST-NEW",
+    "EV-HIST-TX2-OIL"
+  ],
+  "contradiction_ids": [
+    "CON-TELEM-STALE-001"
+  ],
+  "review_state": "requires_operator_resolution",
+  "non_claim": "This synthetic status is an evidence-governance outcome. It is not a determination that the transformer is physically unavailable, degraded, or at risk.",
+  "model_profile_version": "ogard-model-profile-v0.1",
+  "schema_version": "0.1"
+}

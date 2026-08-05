@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite OGARD using the metadata below."
+title: "OGARD: Open Grid Asset Reliability Data Framework"
+type: software
+authors:
+  - family-names: Bektas
+    given-names: Deniz
+version: "0.1.0-rc.1"
+url: "https://github.com/DenBek/ogard"
+repository-code: "https://github.com/DenBek/ogard"
+license: CC-BY-4.0
+abstract: >-
+  A platform-agnostic reference methodology for reconciling fragmented
+  electricity-network asset evidence into auditable, operator-governed
+  information products.
+preferred-citation:
+  type: report
+  title: "OGARD: Open Grid Asset Reliability Data Framework"
+  authors:
+    - family-names: Bektas
+      given-names: Deniz
+  year: 2026
+  version: "Draft Release Candidate v0.1"
+  url: "https://github.com/DenBek/ogard"
