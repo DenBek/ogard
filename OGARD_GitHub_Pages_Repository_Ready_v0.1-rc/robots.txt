@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://denbek.github.io/ogard/sitemap.xml

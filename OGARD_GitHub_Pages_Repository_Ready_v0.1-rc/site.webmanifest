@@ -1,9 +1,0 @@
-{
-  "name": "OGARD - Open Grid Asset Reliability Data Framework",
-  "short_name": "OGARD",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#12304a",
-  "icons": []
-}
