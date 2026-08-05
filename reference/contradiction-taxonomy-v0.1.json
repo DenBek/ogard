@@ -1,0 +1,40 @@
+{
+  "taxonomy_id": "ogard-contradiction-taxonomy-v0.1",
+  "status": "draft_release_candidate",
+  "closed_for_v0_1_benchmark_metrics": true,
+  "types": [
+    {
+      "code": "STATUS_CONFLICT",
+      "definition": "Approved evidence sources report incompatible asset states for overlapping time."
+    },
+    {
+      "code": "EQUIPMENT_LOCATION_CONFLICT",
+      "definition": "Equipment identity and functional-location history cannot both be true for the same interval."
+    },
+    {
+      "code": "TELEMETRY_EQUIPMENT_CONFLICT",
+      "definition": "A telemetry channel association conflicts with time-valid equipment-installation evidence."
+    },
+    {
+      "code": "TEMPORAL_VALIDITY_CONFLICT",
+      "definition": "Records imply relationships or events outside compatible validity intervals."
+    },
+    {
+      "code": "DUPLICATE_IDENTITY_CONFLICT",
+      "definition": "Competing records claim the same identity or one record appears to represent multiple assets."
+    },
+    {
+      "code": "DOCUMENTED_CONFIGURATION_CONFLICT",
+      "definition": "Technical documentation and recorded installed configuration disagree."
+    },
+    {
+      "code": "WORK_ORDER_REFERENCE_CONFLICT",
+      "definition": "A maintenance or work-order reference points to an incompatible asset context."
+    },
+    {
+      "code": "STALE_EVIDENCE_CONFLICT",
+      "definition": "A source remains unchanged beyond an approved freshness or change event and conflicts with newer evidence."
+    }
+  ],
+  "extension_rule": "Operator-specific extensions must use a separately versioned namespace and must not be mixed into v0.1 benchmark denominators without disclosure."
+}

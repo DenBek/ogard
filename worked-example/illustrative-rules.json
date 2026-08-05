@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "status": "illustrative_non_production",
+  "rules": [
+    {
+      "rule_id": "RULE-FL-EXACT-001",
+      "purpose": "Map a source record to a functional location using an exact approved identifier.",
+      "auto_accept": true
+    },
+    {
+      "rule_id": "RULE-INSTALL-TIME-001",
+      "purpose": "Limit equipment candidates to units installed at the location at the event time.",
+      "auto_accept": false
+    },
+    {
+      "rule_id": "RULE-TELEM-STALE-002",
+      "purpose": "Create a contradiction when a telemetry association remains attached to a former unit after replacement.",
+      "auto_accept": false
+    },
+    {
+      "rule_id": "RULE-STATUS-CONTRADICTION-001",
+      "purpose": "Set dependent derived status to Unknown when a material identity contradiction remains unresolved.",
+      "auto_accept": false
+    }
+  ],
+  "model_profile_version": "ogard-model-profile-v0.1",
+  "schema_version": "0.1"
+}

@@ -1,0 +1,42 @@
+{
+  "catalogue_id": "ogard-scenario-catalogue-v0.1-draft",
+  "status": "author_selected_pending_domain_review",
+  "scenarios": [
+    {
+      "class": "identifier_drift",
+      "provenance": "Common integration failure caused by aliases and local naming changes."
+    },
+    {
+      "class": "conflicting_status",
+      "provenance": "Cross-system status semantics and delayed updates."
+    },
+    {
+      "class": "stale_telemetry",
+      "provenance": "Historian freshness, tag retirement, and broken feeds."
+    },
+    {
+      "class": "duplicate_or_competing_records",
+      "provenance": "Duplicate registration, merges, splits, and unresolved identity."
+    },
+    {
+      "class": "missing_physical_identifier",
+      "provenance": "Incomplete serial history and functional-location-only records."
+    },
+    {
+      "class": "late_arriving_update",
+      "provenance": "Event-time versus arrival-time differences."
+    },
+    {
+      "class": "mismatched_cross_source_reference",
+      "provenance": "References attached to the wrong asset context."
+    },
+    {
+      "class": "adverse_condition_evidence",
+      "provenance": "Condition evidence that must be attached without autonomous diagnosis."
+    },
+    {
+      "class": "correlated_source_blind_spot",
+      "provenance": "Adversarial case where consistent sources inherit the same incorrect upstream identity. Expected limitation: method may not detect without independent evidence."
+    }
+  ]
+}

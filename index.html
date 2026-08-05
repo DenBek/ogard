@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OGARD | Open Grid Asset Reliability Data Framework</title>
+  <meta name="description" content="OGARD is a reference methodology for reconciling fragmented electricity-network asset evidence into auditable, operator-governed information products.">
+  <meta name="author" content="Deniz Bektas">
+  <meta name="theme-color" content="#12304a">
+  <link rel="canonical" href="https://denbek.github.io/ogard/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OGARD">
+  <meta property="og:title" content="OGARD | Open Grid Asset Reliability Data Framework">
+  <meta property="og:description" content="OGARD is a reference methodology for reconciling fragmented electricity-network asset evidence into auditable, operator-governed information products.">
+  <meta property="og:url" content="https://denbek.github.io/ogard/">
+  <meta property="og:image" content="https://denbek.github.io/ogard/assets/images/ogard-social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="OGARD home">
+      
+<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+  <rect x="4" y="4" width="40" height="40" rx="11" fill="currentColor" opacity="0.12"/>
+  <path d="M14 16h20M14 24h20M14 32h20M16 14v20M24 14v20M32 14v20" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="16" cy="16" r="3.1" fill="currentColor"/>
+  <circle cx="32" cy="24" r="3.1" fill="currentColor"/>
+  <circle cx="24" cy="32" r="3.1" fill="currentColor"/>
+</svg>
+
+      <span><strong>OGARD</strong><small>Open Grid Asset Reliability Data Framework</small></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="menu-icon" aria-hidden="true"></span>
+      <span class="sr-only">Open navigation</span>
+    </button>
+    <nav id="site-navigation" class="site-nav" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page" class="nav-link active">Home</a>
+<a href="framework.html" class="nav-link">Framework</a>
+<a href="architecture.html" class="nav-link">Architecture</a>
+<a href="publications.html" class="nav-link">Publications</a>
+<a href="about.html" class="nav-link">About</a>
+      <a class="nav-repo" href="https://github.com/DenBek/ogard">Repository</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Draft Release Candidate v0.1</span>
+      <h1>Open Grid Asset Reliability Data Framework</h1>
+      <p class="hero-lead">A platform-agnostic reference methodology for reconciling fragmented electricity-network asset evidence into auditable, operator-governed information products.</p>
+      <div class="button-row">
+        <a class="button primary" href="framework.html">Explore the framework</a>
+        <a class="button secondary" href="papers/OGARD-Technical-Whitepaper-Draft-RC-v0.1.pdf">Download the whitepaper</a>
+        <a class="button text" href="https://github.com/DenBek/ogard">View repository</a>
+      </div>
+    </div>
+    <aside class="status-panel" aria-label="Release status">
+      <h2>Current release</h2>
+      <dl>
+        <div><dt>Version</dt><dd>v0.1 draft release candidate</dd></div>
+        <div><dt>Evidence</dt><dd>Synthetic worked example and inspectable reference artifacts</dd></div>
+        <div><dt>Results</dt><dd>No executed benchmark results reported</dd></div>
+        <div><dt>Adoption</dt><dd>No operator adoption or production deployment claimed</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow intro-block">
+    <span class="section-label">The engineering problem</span>
+    <h2>One physical asset can have several valid information identities</h2>
+    <p>Maintenance systems, asset registers, telemetry historians, work orders, inspections, and technical documents often describe the same equipment through different identifiers and time frames. OGARD preserves those records as evidence, reconciles them without erasing disagreement, and records the basis for each material decision.</p>
+  </div>
+  <div class="container card-grid three">
+    <article class="card identity-card">
+      <span class="card-number">01</span>
+      <h3>Functional location</h3>
+      <p>The role or position in the network. It can remain stable when physical equipment is replaced.</p>
+    </article>
+    <article class="card identity-card">
+      <span class="card-number">02</span>
+      <h3>Equipment unit</h3>
+      <p>The physical installed item. It can be replaced, removed, relocated, or associated with a serial-number history.</p>
+    </article>
+    <article class="card identity-card">
+      <span class="card-number">03</span>
+      <h3>Telemetry identity</h3>
+      <p>The tags or channels used to observe an asset context. They can be renamed, re-pointed, duplicated, or left stale.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section section-tint">
+  <div class="container split">
+    <div>
+      <span class="section-label">Reference architecture</span>
+      <h2>Four logical layers, with evidence and authority kept visible</h2>
+      <p>OGARD separates raw evidence, conformance decisions, the canonical asset-and-evidence layer, and controlled consumption. Review, contradiction, and audit operate as cross-cutting controls.</p>
+      <ul class="check-list">
+        <li>Preserve source evidence before interpretation</li>
+        <li>Apply deterministic rules before similarity methods</li>
+        <li>Route ambiguity and consequential cases to review</li>
+        <li>Keep operator authority explicit</li>
+      </ul>
+      <a class="inline-link" href="architecture.html">See the architecture and worked example</a>
+    </div>
+    <figure class="diagram-card">
+      <img src="diagrams/minimum-logical-architecture.png" alt="OGARD four-layer logical architecture from approved source records through raw evidence, conformance, canonical asset and evidence, and controlled consumption">
+      <figcaption>Minimum logical architecture. Open the <a href="diagrams/minimum-logical-architecture.png">full-size diagram</a>.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="section-label">Controlled outputs</span>
+    <h2>Designed to expose uncertainty, not manufacture certainty</h2>
+    <div class="feature-grid">
+      <article><h3>Traceable mappings</h3><p>Accepted, rejected, deferred, and unresolved relationships retain their evidence, rule or score, version, actor, and time.</p></article>
+      <article><h3>Typed contradictions</h3><p>Material disagreement remains visible and routable instead of being silently overwritten through survivorship.</p></article>
+      <article><h3>Authorized review</h3><p>Human review is a designed control for ambiguous or consequential cases, not an exception hidden outside the data model.</p></article>
+      <article><h3>Safe Unknown</h3><p>Where another status cannot be justified, <code>Unknown</code> is a legitimate controlled outcome rather than an empty field.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-heading-row">
+      <div><span class="section-label">Technical document set</span><h2>Four aligned papers</h2></div>
+      <a class="button light" href="publications.html">View all publications</a>
+    </div>
+    <div class="publication-mini-grid">
+      <a href="papers/OGARD-Technical-Whitepaper-Draft-RC-v0.1.pdf"><strong>Technical Whitepaper</strong><span>Problem, contribution, framework, and boundaries</span></a>
+      <a href="papers/OGARD-Implementation-Guide-Draft-RC-v0.1.pdf"><strong>Implementation Guide</strong><span>Phase-gated implementation and governance controls</span></a>
+      <a href="papers/OGARD-Architecture-and-Data-Model-Specification-Draft-RC-v0.1.pdf"><strong>Architecture Specification</strong><span>Architecture, entity model, conformance, and taxonomy</span></a>
+      <a href="papers/OGARD-Synthetic-Benchmark-Methodology-Draft-RC-v0.1.pdf"><strong>Benchmark Methodology</strong><span>Future synthetic evaluation design, with no results reported</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="footer-brand" href="index.html">OGARD</a>
+      <p>Open Grid Asset Reliability Data Framework</p>
+    </div>
+    <div>
+      <p><strong>Draft Release Candidate v0.1</strong></p>
+      <p>Documentation and diagrams: CC BY 4.0</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/DenBek/ogard">GitHub repository</a>
+      <a href="publications.html">Publications</a>
+      <a href="about.html#contact">Contact and feedback</a>
+    </div>
+  </div>
+  <div class="container footer-note">
+    <p>OGARD is a technical reference methodology. It is not an operational control system, engineering standard, safety case, cybersecurity certification, regulatory approval, or substitute for operator engineering and governance procedures.</p>
+  </div>
+</footer>
+
+</body>
+</html>
