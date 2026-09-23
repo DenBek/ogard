@@ -6,6 +6,7 @@
   "files": [
     ".github/workflows/validate.yml",
     ".gitignore",
+    ".nojekyll",
     "404.html",
     "CHANGELOG.md",
     "CITATION.cff",
