@@ -1,0 +1,94 @@
+{
+  "baseline_version": "explicit-id-or-current-location-1",
+  "cases": [
+    {
+      "case_id": "C01",
+      "decisions": [
+        {
+          "accepted_equipment_id": "EQ-TR-NEW-01",
+          "disposition": "accepted_automatic",
+          "evidence_ids": [
+            "EV-INST-NEW",
+            "EV-WO-2026-0512"
+          ],
+          "reason_code": "UNIQUE_CURRENT_LOCATION_LOOKUP",
+          "record_type": "work_order",
+          "subject_record_id": "EV-WO-2026-0512"
+        },
+        {
+          "accepted_equipment_id": "EQ-TR-OLD-01",
+          "disposition": "accepted_automatic",
+          "evidence_ids": [
+            "EV-HIST-TX2-OIL"
+          ],
+          "reason_code": "EXPLICIT_ID_LOOKUP",
+          "record_type": "telemetry_link",
+          "subject_record_id": "EV-HIST-TX2-OIL"
+        }
+      ]
+    },
+    {
+      "case_id": "C02",
+      "decisions": [
+        {
+          "accepted_equipment_id": "EQ-TR-OLD-01",
+          "disposition": "accepted_automatic",
+          "evidence_ids": [
+            "WO-LATE"
+          ],
+          "reason_code": "EXPLICIT_ID_LOOKUP",
+          "record_type": "work_order",
+          "subject_record_id": "WO-LATE"
+        }
+      ]
+    },
+    {
+      "case_id": "C03",
+      "decisions": [
+        {
+          "accepted_equipment_id": null,
+          "disposition": "unresolved",
+          "evidence_ids": [
+            "INST-A",
+            "INST-B",
+            "WO-AMBIGUOUS"
+          ],
+          "reason_code": "NO_UNIQUE_CURRENT_INSTALLATION",
+          "record_type": "work_order",
+          "subject_record_id": "WO-AMBIGUOUS"
+        }
+      ]
+    },
+    {
+      "case_id": "C04",
+      "decisions": [
+        {
+          "accepted_equipment_id": "EQ-TR-NEW-01",
+          "disposition": "accepted_automatic",
+          "evidence_ids": [
+            "WO-CLEAN"
+          ],
+          "reason_code": "EXPLICIT_ID_LOOKUP",
+          "record_type": "work_order",
+          "subject_record_id": "WO-CLEAN"
+        }
+      ]
+    },
+    {
+      "case_id": "C05",
+      "decisions": [
+        {
+          "accepted_equipment_id": "EQ-SHARED-WRONG",
+          "disposition": "accepted_automatic",
+          "evidence_ids": [
+            "WO-SHARED-ERROR"
+          ],
+          "reason_code": "EXPLICIT_ID_LOOKUP",
+          "record_type": "work_order",
+          "subject_record_id": "WO-SHARED-ERROR"
+        }
+      ]
+    }
+  ],
+  "input_hash": "92aa59ed68f9b6a5f0915163bf67793058fd4c5650c3e01e0047851de3246396"
+}

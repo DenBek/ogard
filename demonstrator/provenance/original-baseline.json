@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "8746b46e31eb771f088e40da47d68912c58005b5b26739033f63d2c6cd30e600",
+  "comparison": {
+    "decisions.json": true,
+    "evaluation.json": true,
+    "walkthrough.html": true
+  },
+  "test_count": 15,
+  "all_tests_passed": true,
+  "summary": {
+    "case_count": 5,
+    "all_workflow_checks_passed": true,
+    "automatic_accepts": 3,
+    "incorrect_automatic_accepts": 1,
+    "scripted_review_accepts": 1
+  }
+}

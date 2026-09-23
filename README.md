@@ -2,55 +2,63 @@
 
 **Open Grid Asset Reliability Data Framework**
 
-OGARD is an independently authored reference methodology for reconciling fragmented electricity-network asset evidence into auditable, operator-governed information products.
+OGARD provides a reusable methodology and executable reference implementation for reconciling electricity-network equipment records across maintenance, installation history and telemetry associations. It preserves evidence, time validity, conflicting accounts and review decisions.
 
-**Website:** https://denbek.github.io/ogard/  
-**Author:** Deniz Bektas  
-**Repository:** https://github.com/DenBek/ogard  
-**Current status:** Public Reference Release v0.1
+**Current release:** 0.2.0 - executable transformer reference implementation
+**Author:** Deniz Bektas
+**Website:** https://denbek.github.io/ogard/
+**Repository:** https://github.com/DenBek/ogard
 
-## What OGARD addresses
+## Run and verify
 
-Grid assets are often represented differently across maintenance systems, asset registers, telemetry historians, work orders, inspections, fault records, and technical documents. OGARD provides a controlled method to:
+Python 3.12 or later is sufficient. No third-party packages, credentials or cloud services are required. From the repository root:
 
-- preserve source evidence and provenance
-- separate functional location, physical equipment identity, and telemetry identity
-- maintain time-valid relationships
-- apply versioned deterministic rules and reproducible similarity methods
-- route ambiguous or consequential cases to authorized review
-- preserve material contradictions rather than silently overwriting them
-- produce operator-governed outputs with explicit audit records and limitations
+```sh
+python run_validation.py --output ../ogard-rerun --verify-snapshot
+```
+
+Use `python3` where appropriate. The command verifies the regression suite, both synthetic source layouts, workflow behavior, baseline comparison, supplied deterministic outputs, local website links and release checksums. Open `../ogard-rerun/walkthrough.html` for the generated explanation. The [review guide](demonstrator/REVIEW_GUIDE.md) explains how to record a reproduction of a fixed source revision.
+
+## What is implemented
+
+- Explicit equipment identity corroborated by event-time installation history.
+- Preserved source evidence, conflicts, decision revisions and review records.
+- Review for missing identifiers and conflicting candidates; unresolved outcomes where evidence is insufficient.
+- Two documented input layouts mapped into the same processing engine.
+- A simple baseline, separate physical-truth evaluation and reproducible result reports.
+
+Five selected synthetic cases produce six decisions. The baseline automatically accepts five links, including two incorrect ones. OGARD automatically accepts three, including one incorrect one, and refers three to review. Scripted review is reported separately. [Inspect the complete comparison](demonstrator/results/comparison.md).
+
+These counts illustrate specified behavior and a retained shared-source-error limitation. They do not estimate utility-data accuracy, operational benefit or adoption. See the [implemented scope](docs/implementation-scope.md).
 
 ## Repository contents
 
-- `papers/`: three aligned OGARD technical papers
-- `diagrams/`: original system-context, logical-architecture, and entity-relationship diagrams
-- `worked-example/`: synthetic transformer records covering evidence, mapping, review, contradiction, status, and audit
-- `reference/`: contradiction taxonomy, indicative CIM crosswalk, and benchmark scenario catalogue
-- `assets/` and root HTML files: static GitHub Pages website
-- `release-manifest.json`: machine-readable package inventory 
+| Path | Contents |
+| --- | --- |
+| `demonstrator/` | Executable code, inputs, mappings, labels, tests, results and reviewer instructions |
+| `docs/` | Input contract, scope, evaluation method and release validation record |
+| `papers/` | Four original version 0.1 methodology and design PDFs |
+| `diagrams/` | System context, logical architecture and entity relationships |
+| `worked-example/` | Original non-executable transformer design example |
+| `reference/` | Contradiction taxonomy, indicative CIM crosswalk and broader scenario catalogue |
+| `assets/` and root HTML | Static GitHub Pages website, including the implementation page |
+| `release-manifest.json` and `SHA256SUMS.txt` | Versioned inventory and file integrity checks |
+
+The original papers cover a broader program, including similarity methods and derived statuses. The current software scope is stated separately; release 0.2.0 does not claim completion of that broader design or the full benchmark plan.
 
 ## Document set
 
-1. **Technical Whitepaper**: problem definition, contribution, framework, governance, and limitations.
-2. **Implementation Guide**: readiness, roles, implementation sequence, review controls, testing, and production boundaries.
-3. **Architecture and Data Model Specification**: minimum architecture, entities, conformance controls, contradiction taxonomy, and indicative CIM guidance.
+1. Technical Whitepaper.
+2. Implementation Guide.
+3. Architecture and Data Model Specification.
+4. Synthetic Benchmark Methodology and Validation Plan.
 
-## Synthetic worked example
+All four PDFs retain their original version 0.1 labels. Current executable results are in `demonstrator/results/`, not retroactively attributed to those original papers.
 
-The example follows one maintenance work order after a transformer replacement. The equipment mapping is reviewed and accepted using time-valid installation evidence. A historian tag remains associated with the former unit, so OGARD records `TELEMETRY_EQUIPMENT_CONFLICT` and keeps the dependent status `Unknown` until authorized resolution.
+## Citation and reuse
 
-Start with [`worked-example/README.md`](worked-example/README.md) or view the [website walkthrough](https://denbek.github.io/ogard/architecture.html#worked-example).
+Bektas, D. (2026). *OGARD: Open Grid Asset Reliability Data Framework*. Executable Reference Release 0.2.0. https://github.com/DenBek/ogard
 
+Original executable and website code is Apache-2.0. Documentation, diagrams and structured synthetic data are CC-BY-4.0. See [LICENSE.md](LICENSE.md) and [development provenance](demonstrator/PROVENANCE.md).
 
-## Citation
-
-Bektas, D. (2026). *OGARD: Open Grid Asset Reliability Data Framework*. Public Reference Release v0.1. https://github.com/DenBek/ogard
-
-## Licensing
-
-Documentation, diagrams, and structured synthetic examples are provided under CC BY 4.0. Original website code is provided under Apache License 2.0. See [`LICENSE.md`](LICENSE.md).
-
-## Technical feedback
-
-Use [GitHub Issues](https://github.com/DenBek/ogard/issues) for corrections, implementation questions, taxonomy proposals, or reproducibility feedback. Do not post confidential, employer-controlled, client, or utility operational information.
+Use [GitHub Issues](https://github.com/DenBek/ogard/issues) for reproducible technical feedback. Do not post confidential employer, client or utility information.

@@ -1,0 +1,32 @@
+name: Validate OGARD release
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Retrieve the exact public source revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ogard-source"
+          cd "$RUNNER_TEMP/ogard-source"
+          git init --quiet
+          git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git"
+          git fetch --quiet --depth=1 origin "$GITHUB_SHA"
+          git checkout --quiet --detach FETCH_HEAD
+      - name: Verify tests, outputs, links and release fingerprints
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/ogard-source"
+          python3 --version
+          python3 run_validation.py --output "$RUNNER_TEMP/ogard-validation" --verify-snapshot

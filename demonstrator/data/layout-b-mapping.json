@@ -1,0 +1,36 @@
+{
+  "equipment_ids": {
+    "UNIT-001": "EQ-CANDIDATE-A",
+    "UNIT-002": "EQ-CANDIDATE-B",
+    "UNIT-003": "EQ-SHARED-WRONG",
+    "UNIT-004": "EQ-TR-NEW-01",
+    "UNIT-005": "EQ-TR-OLD-01"
+  },
+  "fields": {
+    "ArrivedUTC": "received_at",
+    "EvidenceKeys": "evidence_ids",
+    "InstalledUTC": "valid_from",
+    "OccurredUTC": "event_at",
+    "PlaceCode": "location_id",
+    "RecordKey": "record_id",
+    "RecordKind": "type",
+    "RemovedUTC": "valid_to",
+    "ReviewAction": "action",
+    "ReviewReason": "reason",
+    "ReviewerName": "actor",
+    "ReviewerRole": "role",
+    "SourceName": "source_system",
+    "SubjectKey": "subject_record_id",
+    "UnitCode": "equipment_id"
+  },
+  "location_ids": {
+    "BAY/001": "FL-NE-SUB114-TX02"
+  },
+  "mapping_version": "ogard-layout-b-map-1",
+  "record_types": {
+    "CHANNEL": "telemetry_link",
+    "DECISION": "review",
+    "INSTALL": "installation",
+    "WORK": "work_order"
+  }
+}

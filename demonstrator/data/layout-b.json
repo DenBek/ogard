@@ -1,0 +1,222 @@
+{
+  "data_classification": "entirely_synthetic",
+  "profile": {
+    "installation_intervals": "start inclusive, end exclusive; explicit timezone-aware timestamps",
+    "missing_physical_identifier": "requires asset review even when one time-valid candidate exists",
+    "review_mode": "scripted synthetic events, not actual expert review"
+  },
+  "scenarios": [
+    {
+      "name": "Replacement: accepted work order, unresolved telemetry",
+      "narrative": "A work order omits the serial number. The new installation record supports a candidate, a scripted asset reviewer accepts it, and a historian link still naming the former unit remains disputed.",
+      "rows": [
+        {
+          "ArrivedUTC": "2026-05-12T10:02:15Z",
+          "OccurredUTC": "2026-05-12T09:20:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "EV-WO-2026-0512",
+          "RecordKind": "WORK",
+          "SourceName": "synthetic_cmms",
+          "UnitCode": null
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:02:25Z",
+          "InstalledUTC": "2020-03-01T00:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "EV-INST-OLD",
+          "RecordKind": "INSTALL",
+          "RemovedUTC": "2026-04-15T00:00:00Z",
+          "SourceName": "synthetic_installation_history",
+          "UnitCode": "UNIT-005"
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:02:30Z",
+          "InstalledUTC": "2026-04-15T00:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "EV-INST-NEW",
+          "RecordKind": "INSTALL",
+          "RemovedUTC": null,
+          "SourceName": "synthetic_installation_history",
+          "UnitCode": "UNIT-004"
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:02:35Z",
+          "OccurredUTC": "2026-05-12T09:15:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "EV-HIST-TX2-OIL",
+          "RecordKind": "CHANNEL",
+          "SourceName": "synthetic_historian",
+          "UnitCode": "UNIT-005"
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:20:00Z",
+          "EvidenceKeys": [
+            "EV-WO-2026-0512",
+            "EV-INST-NEW"
+          ],
+          "RecordKey": "RA-WO-2026-0512",
+          "RecordKind": "DECISION",
+          "ReviewAction": "accept",
+          "ReviewReason": "The dated installation evidence supports the replacement unit for this work-order event.",
+          "ReviewerName": "SCRIPTED_REVIEWER_01",
+          "ReviewerRole": "asset_reviewer",
+          "SourceName": "synthetic_review_log",
+          "SubjectKey": "EV-WO-2026-0512",
+          "UnitCode": "UNIT-004"
+        }
+      ],
+      "scenario": "C01"
+    },
+    {
+      "name": "A late record belongs to the former transformer",
+      "narrative": "A work order received in May describes an April 10 event. Its physical identifier and the installation history agree on the former transformer, although another unit is now installed.",
+      "rows": [
+        {
+          "ArrivedUTC": "2026-05-12T10:00:00Z",
+          "InstalledUTC": "2020-03-01T00:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "EV-INST-OLD",
+          "RecordKind": "INSTALL",
+          "RemovedUTC": "2026-04-15T00:00:00Z",
+          "SourceName": "synthetic_installation_history",
+          "UnitCode": "UNIT-005"
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:00:00Z",
+          "InstalledUTC": "2026-04-15T00:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "EV-INST-NEW",
+          "RecordKind": "INSTALL",
+          "RemovedUTC": null,
+          "SourceName": "synthetic_installation_history",
+          "UnitCode": "UNIT-004"
+        },
+        {
+          "ArrivedUTC": "2026-05-13T12:00:00Z",
+          "OccurredUTC": "2026-04-10T09:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "WO-LATE",
+          "RecordKind": "WORK",
+          "SourceName": "synthetic_cmms",
+          "UnitCode": "UNIT-005"
+        }
+      ],
+      "scenario": "C02"
+    },
+    {
+      "name": "Competing histories remain unresolved",
+      "narrative": "Two source systems name different installed units for the same location and time. The work order has no equipment identifier. A scripted reviewer defers resolution while retaining both accounts.",
+      "rows": [
+        {
+          "ArrivedUTC": "2026-05-12T10:00:00Z",
+          "InstalledUTC": "2026-04-15T00:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "INST-A",
+          "RecordKind": "INSTALL",
+          "RemovedUTC": null,
+          "SourceName": "synthetic_system_a",
+          "UnitCode": "UNIT-001"
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:00:00Z",
+          "InstalledUTC": "2026-04-15T00:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "INST-B",
+          "RecordKind": "INSTALL",
+          "RemovedUTC": null,
+          "SourceName": "synthetic_system_b",
+          "UnitCode": "UNIT-002"
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:02:15Z",
+          "OccurredUTC": "2026-05-12T09:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "WO-AMBIGUOUS",
+          "RecordKind": "WORK",
+          "SourceName": "synthetic_cmms",
+          "UnitCode": null
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:30:00Z",
+          "EvidenceKeys": [
+            "WO-AMBIGUOUS",
+            "INST-A",
+            "INST-B"
+          ],
+          "RecordKey": "REVIEW-DEFER",
+          "RecordKind": "DECISION",
+          "ReviewAction": "defer",
+          "ReviewReason": "The available records do not establish which installation history is correct.",
+          "ReviewerName": "SCRIPTED_REVIEWER_01",
+          "ReviewerRole": "asset_reviewer",
+          "SourceName": "synthetic_review_log",
+          "SubjectKey": "WO-AMBIGUOUS"
+        }
+      ],
+      "scenario": "C03"
+    },
+    {
+      "name": "A supported identifier is accepted automatically",
+      "narrative": "A clean work order names the equipment shown by the installation history at the event time. This control case checks that consistent evidence can be used without unnecessary review.",
+      "rows": [
+        {
+          "ArrivedUTC": "2026-05-12T10:00:00Z",
+          "InstalledUTC": "2020-03-01T00:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "EV-INST-OLD",
+          "RecordKind": "INSTALL",
+          "RemovedUTC": "2026-04-15T00:00:00Z",
+          "SourceName": "synthetic_installation_history",
+          "UnitCode": "UNIT-005"
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:00:00Z",
+          "InstalledUTC": "2026-04-15T00:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "EV-INST-NEW",
+          "RecordKind": "INSTALL",
+          "RemovedUTC": null,
+          "SourceName": "synthetic_installation_history",
+          "UnitCode": "UNIT-004"
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:02:15Z",
+          "OccurredUTC": "2026-05-12T09:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "WO-CLEAN",
+          "RecordKind": "WORK",
+          "SourceName": "synthetic_cmms",
+          "UnitCode": "UNIT-004"
+        }
+      ],
+      "scenario": "C04"
+    },
+    {
+      "name": "Known limitation: several sources repeat the same wrong identity",
+      "narrative": "An installation record and work order inherit the same incorrect upstream equipment identifier. With no contradictory input, the implementation accepts that association. A separate synthetic truth label identifies the error.",
+      "rows": [
+        {
+          "ArrivedUTC": "2026-05-12T10:00:00Z",
+          "InstalledUTC": "2026-04-15T00:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "INST-SHARED-ERROR",
+          "RecordKind": "INSTALL",
+          "RemovedUTC": null,
+          "SourceName": "synthetic_register_copy",
+          "UnitCode": "UNIT-003"
+        },
+        {
+          "ArrivedUTC": "2026-05-12T10:02:15Z",
+          "OccurredUTC": "2026-05-12T09:00:00Z",
+          "PlaceCode": "BAY/001",
+          "RecordKey": "WO-SHARED-ERROR",
+          "RecordKind": "WORK",
+          "SourceName": "synthetic_cmms",
+          "UnitCode": "UNIT-003"
+        }
+      ],
+      "scenario": "C05"
+    }
+  ],
+  "schema_version": "ogard-source-layout-b-1"
+}

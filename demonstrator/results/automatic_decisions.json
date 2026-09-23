@@ -1,0 +1,810 @@
+{
+  "cases": [
+    {
+      "audit": [
+        {
+          "entry_hash": "bb6d8aff599596e3a97f0cd2ad1c6859a9d12914743052e8b415d15fb214aaa3",
+          "event": "source_received",
+          "previous_hash": null,
+          "processed_at": "2026-05-12T10:02:15Z",
+          "sequence": 1,
+          "source_hash": "87ebaee7d12eab30e62260f4adfc83336c49a98df9a1780dfdefd200b2330344",
+          "trigger_record_id": "EV-WO-2026-0512"
+        },
+        {
+          "decision": {
+            "accepted_equipment_id": null,
+            "candidate_equipment_ids": [],
+            "contradictions": [],
+            "disposition": "unresolved",
+            "event_at": "2026-05-12T09:20:00Z",
+            "evidence_ids": [
+              "EV-WO-2026-0512"
+            ],
+            "location_id": "FL-NE-SUB114-TX02",
+            "reason_code": "NO_INSTALLATION_EVIDENCE_AT_EVENT_TIME",
+            "record_type": "work_order",
+            "rule_version": "ogard-explicit-temporal-2",
+            "subject_record_id": "EV-WO-2026-0512"
+          },
+          "entry_hash": "57dfe6431e63ee5f8fc19c8ea6d322ef6e89810e69cd24b02165e2bc168d6060",
+          "event": "decision_updated",
+          "previous_hash": "bb6d8aff599596e3a97f0cd2ad1c6859a9d12914743052e8b415d15fb214aaa3",
+          "processed_at": "2026-05-12T10:02:15Z",
+          "sequence": 2,
+          "subject_record_id": "EV-WO-2026-0512",
+          "supersedes_sequence": null,
+          "trigger_record_id": "EV-WO-2026-0512"
+        },
+        {
+          "entry_hash": "f277af6ba101b0dc1e47180cad45be97d7c55aa91753d1411215be32acbbc06e",
+          "event": "source_received",
+          "previous_hash": "57dfe6431e63ee5f8fc19c8ea6d322ef6e89810e69cd24b02165e2bc168d6060",
+          "processed_at": "2026-05-12T10:02:25Z",
+          "sequence": 3,
+          "source_hash": "fce6bb23b3ae338af3c4a6847a4c1ae474e94a6d0de47e88afc1946e9079922a",
+          "trigger_record_id": "EV-INST-OLD"
+        },
+        {
+          "entry_hash": "8e162d2ac443faf7d56372fae12cc6729e36db81595dcf4161d990f8f6d793b6",
+          "event": "source_received",
+          "previous_hash": "f277af6ba101b0dc1e47180cad45be97d7c55aa91753d1411215be32acbbc06e",
+          "processed_at": "2026-05-12T10:02:30Z",
+          "sequence": 4,
+          "source_hash": "29b24259ae135bea8059dd356a5a2aac915afac71d32cc88d97d7b45b422b2ec",
+          "trigger_record_id": "EV-INST-NEW"
+        },
+        {
+          "decision": {
+            "accepted_equipment_id": null,
+            "candidate_equipment_ids": [
+              "EQ-TR-NEW-01"
+            ],
+            "contradictions": [],
+            "disposition": "review_required",
+            "event_at": "2026-05-12T09:20:00Z",
+            "evidence_ids": [
+              "EV-INST-NEW",
+              "EV-WO-2026-0512"
+            ],
+            "location_id": "FL-NE-SUB114-TX02",
+            "reason_code": "PHYSICAL_IDENTIFIER_MISSING_REVIEW_REQUIRED",
+            "record_type": "work_order",
+            "rule_version": "ogard-explicit-temporal-2",
+            "subject_record_id": "EV-WO-2026-0512"
+          },
+          "entry_hash": "f1bf37f3fdf04f7e65256261a3e0c493726b8a50b255f444ef9a818fc12f0b44",
+          "event": "decision_updated",
+          "previous_hash": "8e162d2ac443faf7d56372fae12cc6729e36db81595dcf4161d990f8f6d793b6",
+          "processed_at": "2026-05-12T10:02:30Z",
+          "sequence": 5,
+          "subject_record_id": "EV-WO-2026-0512",
+          "supersedes_sequence": 2,
+          "trigger_record_id": "EV-INST-NEW"
+        },
+        {
+          "entry_hash": "a6ef1599843d8e3a1df0eb0bd1fab439459e9e7911f95bab1ad9c4e8e419545b",
+          "event": "source_received",
+          "previous_hash": "f1bf37f3fdf04f7e65256261a3e0c493726b8a50b255f444ef9a818fc12f0b44",
+          "processed_at": "2026-05-12T10:02:35Z",
+          "sequence": 6,
+          "source_hash": "1dc409762272bc5547ad755454cc0491f4198e4067fd74821b85a3c90629a48a",
+          "trigger_record_id": "EV-HIST-TX2-OIL"
+        },
+        {
+          "decision": {
+            "accepted_equipment_id": null,
+            "candidate_equipment_ids": [
+              "EQ-TR-NEW-01"
+            ],
+            "contradictions": [
+              {
+                "code": "TELEMETRY_EQUIPMENT_CONFLICT",
+                "evidence_ids": [
+                  "EV-HIST-TX2-OIL",
+                  "EV-INST-NEW"
+                ]
+              }
+            ],
+            "disposition": "review_required",
+            "event_at": "2026-05-12T09:15:00Z",
+            "evidence_ids": [
+              "EV-HIST-TX2-OIL",
+              "EV-INST-NEW"
+            ],
+            "location_id": "FL-NE-SUB114-TX02",
+            "reason_code": "CONFLICTING_ASSET_EVIDENCE",
+            "record_type": "telemetry_link",
+            "rule_version": "ogard-explicit-temporal-2",
+            "subject_record_id": "EV-HIST-TX2-OIL"
+          },
+          "entry_hash": "8ee6b4235622febea0c8a50078a78d9011f619b30651b2a4484e8e52f83fd052",
+          "event": "decision_updated",
+          "previous_hash": "a6ef1599843d8e3a1df0eb0bd1fab439459e9e7911f95bab1ad9c4e8e419545b",
+          "processed_at": "2026-05-12T10:02:35Z",
+          "sequence": 7,
+          "subject_record_id": "EV-HIST-TX2-OIL",
+          "supersedes_sequence": null,
+          "trigger_record_id": "EV-HIST-TX2-OIL"
+        }
+      ],
+      "case_id": "C01",
+      "decision_counts": {
+        "review_required": 2
+      },
+      "decisions": [
+        {
+          "accepted_equipment_id": null,
+          "candidate_equipment_ids": [
+            "EQ-TR-NEW-01"
+          ],
+          "contradictions": [],
+          "disposition": "review_required",
+          "event_at": "2026-05-12T09:20:00Z",
+          "evidence_ids": [
+            "EV-INST-NEW",
+            "EV-WO-2026-0512"
+          ],
+          "location_id": "FL-NE-SUB114-TX02",
+          "reason_code": "PHYSICAL_IDENTIFIER_MISSING_REVIEW_REQUIRED",
+          "record_type": "work_order",
+          "rule_version": "ogard-explicit-temporal-2",
+          "subject_record_id": "EV-WO-2026-0512"
+        },
+        {
+          "accepted_equipment_id": null,
+          "candidate_equipment_ids": [
+            "EQ-TR-NEW-01"
+          ],
+          "contradictions": [
+            {
+              "code": "TELEMETRY_EQUIPMENT_CONFLICT",
+              "evidence_ids": [
+                "EV-HIST-TX2-OIL",
+                "EV-INST-NEW"
+              ]
+            }
+          ],
+          "disposition": "review_required",
+          "event_at": "2026-05-12T09:15:00Z",
+          "evidence_ids": [
+            "EV-HIST-TX2-OIL",
+            "EV-INST-NEW"
+          ],
+          "location_id": "FL-NE-SUB114-TX02",
+          "reason_code": "CONFLICTING_ASSET_EVIDENCE",
+          "record_type": "telemetry_link",
+          "rule_version": "ogard-explicit-temporal-2",
+          "subject_record_id": "EV-HIST-TX2-OIL"
+        }
+      ],
+      "description": "A work order omits the serial number. The new installation record supports a candidate, a scripted asset reviewer accepts it, and a historian link still naming the former unit remains disputed.",
+      "input_ledger": [
+        {
+          "disposition": "review_required",
+          "kind": "work_order",
+          "record_id": "EV-WO-2026-0512"
+        },
+        {
+          "disposition": "context_evidence_retained",
+          "kind": "installation",
+          "record_id": "EV-INST-OLD"
+        },
+        {
+          "disposition": "context_evidence_retained",
+          "kind": "installation",
+          "record_id": "EV-INST-NEW"
+        },
+        {
+          "disposition": "review_required",
+          "kind": "telemetry_link",
+          "record_id": "EV-HIST-TX2-OIL"
+        }
+      ],
+      "limits": [
+        "Explicit identifiers and installation intervals only; no similarity or derived-status calculation.",
+        "Reviewer names and roles are synthetic declarations, not authenticated human identities.",
+        "Hash links support consistency checks, not tamper-proof storage."
+      ],
+      "source_hash": "93b7a6b86c8343e218d971d7350e1dde269490f135b795acb05cc44fc6600d16",
+      "source_records": [
+        {
+          "equipment_id": null,
+          "event_at": "2026-05-12T09:20:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:02:15Z",
+          "record_id": "EV-WO-2026-0512",
+          "source_system": "synthetic_cmms",
+          "type": "work_order"
+        },
+        {
+          "equipment_id": "EQ-TR-OLD-01",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:02:25Z",
+          "record_id": "EV-INST-OLD",
+          "source_system": "synthetic_installation_history",
+          "type": "installation",
+          "valid_from": "2020-03-01T00:00:00Z",
+          "valid_to": "2026-04-15T00:00:00Z"
+        },
+        {
+          "equipment_id": "EQ-TR-NEW-01",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:02:30Z",
+          "record_id": "EV-INST-NEW",
+          "source_system": "synthetic_installation_history",
+          "type": "installation",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "equipment_id": "EQ-TR-OLD-01",
+          "event_at": "2026-05-12T09:15:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:02:35Z",
+          "record_id": "EV-HIST-TX2-OIL",
+          "source_system": "synthetic_historian",
+          "type": "telemetry_link"
+        }
+      ],
+      "title": "Replacement: accepted work order, unresolved telemetry"
+    },
+    {
+      "audit": [
+        {
+          "entry_hash": "b57b1572d99213e224d91b270d5e8c9b36aa3ab425e7087312cfbedd8b5dc617",
+          "event": "source_received",
+          "previous_hash": null,
+          "processed_at": "2026-05-12T10:00:00Z",
+          "sequence": 1,
+          "source_hash": "ed8988ab9fcbec7b04d454c66c49cff44b01e6ac001160b0c9343ad27675517e",
+          "trigger_record_id": "EV-INST-OLD"
+        },
+        {
+          "entry_hash": "822b1cc2c95973bf9c9c6d6ce132071e90a1bf7b6b618bcf062cf422fbd17fd8",
+          "event": "source_received",
+          "previous_hash": "b57b1572d99213e224d91b270d5e8c9b36aa3ab425e7087312cfbedd8b5dc617",
+          "processed_at": "2026-05-12T10:00:00Z",
+          "sequence": 2,
+          "source_hash": "3458f16c8c71aae810a8eea649b710f4144c5bbe9943d2ae39b309f3879ea1dc",
+          "trigger_record_id": "EV-INST-NEW"
+        },
+        {
+          "entry_hash": "25f82d6d6872c99eab01a30a318efed563045f0b0662cc64bf4ea28495123093",
+          "event": "source_received",
+          "previous_hash": "822b1cc2c95973bf9c9c6d6ce132071e90a1bf7b6b618bcf062cf422fbd17fd8",
+          "processed_at": "2026-05-13T12:00:00Z",
+          "sequence": 3,
+          "source_hash": "c75b35794f689b52accd31dd2b536435c459bf4068617798db015137098d3b3f",
+          "trigger_record_id": "WO-LATE"
+        },
+        {
+          "decision": {
+            "accepted_equipment_id": "EQ-TR-OLD-01",
+            "candidate_equipment_ids": [
+              "EQ-TR-OLD-01"
+            ],
+            "contradictions": [],
+            "disposition": "accepted_automatic",
+            "event_at": "2026-04-10T09:00:00Z",
+            "evidence_ids": [
+              "EV-INST-OLD",
+              "WO-LATE"
+            ],
+            "location_id": "FL-NE-SUB114-TX02",
+            "reason_code": "EXPLICIT_ID_CORROBORATED_BY_INSTALLATION",
+            "record_type": "work_order",
+            "rule_version": "ogard-explicit-temporal-2",
+            "subject_record_id": "WO-LATE"
+          },
+          "entry_hash": "68b5a4c2c3f7e9a1778ff44eeca8e9a4dc932c2e4577020c140e7572f8816c19",
+          "event": "decision_updated",
+          "previous_hash": "25f82d6d6872c99eab01a30a318efed563045f0b0662cc64bf4ea28495123093",
+          "processed_at": "2026-05-13T12:00:00Z",
+          "sequence": 4,
+          "subject_record_id": "WO-LATE",
+          "supersedes_sequence": null,
+          "trigger_record_id": "WO-LATE"
+        }
+      ],
+      "case_id": "C02",
+      "decision_counts": {
+        "accepted_automatic": 1
+      },
+      "decisions": [
+        {
+          "accepted_equipment_id": "EQ-TR-OLD-01",
+          "candidate_equipment_ids": [
+            "EQ-TR-OLD-01"
+          ],
+          "contradictions": [],
+          "disposition": "accepted_automatic",
+          "event_at": "2026-04-10T09:00:00Z",
+          "evidence_ids": [
+            "EV-INST-OLD",
+            "WO-LATE"
+          ],
+          "location_id": "FL-NE-SUB114-TX02",
+          "reason_code": "EXPLICIT_ID_CORROBORATED_BY_INSTALLATION",
+          "record_type": "work_order",
+          "rule_version": "ogard-explicit-temporal-2",
+          "subject_record_id": "WO-LATE"
+        }
+      ],
+      "description": "A work order received in May describes an April 10 event. Its physical identifier and the installation history agree on the former transformer, although another unit is now installed.",
+      "input_ledger": [
+        {
+          "disposition": "context_evidence_retained",
+          "kind": "installation",
+          "record_id": "EV-INST-OLD"
+        },
+        {
+          "disposition": "context_evidence_retained",
+          "kind": "installation",
+          "record_id": "EV-INST-NEW"
+        },
+        {
+          "disposition": "accepted_automatic",
+          "kind": "work_order",
+          "record_id": "WO-LATE"
+        }
+      ],
+      "limits": [
+        "Explicit identifiers and installation intervals only; no similarity or derived-status calculation.",
+        "Reviewer names and roles are synthetic declarations, not authenticated human identities.",
+        "Hash links support consistency checks, not tamper-proof storage."
+      ],
+      "source_hash": "265f4dce431c4dd5dca1e0560918b62d2a5897cf3afd49a02aafb8eefd987799",
+      "source_records": [
+        {
+          "equipment_id": "EQ-TR-OLD-01",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:00:00Z",
+          "record_id": "EV-INST-OLD",
+          "source_system": "synthetic_installation_history",
+          "type": "installation",
+          "valid_from": "2020-03-01T00:00:00Z",
+          "valid_to": "2026-04-15T00:00:00Z"
+        },
+        {
+          "equipment_id": "EQ-TR-NEW-01",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:00:00Z",
+          "record_id": "EV-INST-NEW",
+          "source_system": "synthetic_installation_history",
+          "type": "installation",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "equipment_id": "EQ-TR-OLD-01",
+          "event_at": "2026-04-10T09:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-13T12:00:00Z",
+          "record_id": "WO-LATE",
+          "source_system": "synthetic_cmms",
+          "type": "work_order"
+        }
+      ],
+      "title": "A late record belongs to the former transformer"
+    },
+    {
+      "audit": [
+        {
+          "entry_hash": "355f95446408426b83bc8fe3e6fd1cc005c26a1b4ce70f2e1aec7f78ec9e456f",
+          "event": "source_received",
+          "previous_hash": null,
+          "processed_at": "2026-05-12T10:00:00Z",
+          "sequence": 1,
+          "source_hash": "0ce5f78b80a2a74a6100556c6d21f8f0aac517c802428d8f5cc10410c82844c4",
+          "trigger_record_id": "INST-A"
+        },
+        {
+          "entry_hash": "4e142cb41296c13a559311f6ca910e274183cdcd4749cf6e2007309ed364bec1",
+          "event": "source_received",
+          "previous_hash": "355f95446408426b83bc8fe3e6fd1cc005c26a1b4ce70f2e1aec7f78ec9e456f",
+          "processed_at": "2026-05-12T10:00:00Z",
+          "sequence": 2,
+          "source_hash": "f28477d6083783fdab6c850a648998bceaf4775a1047b0291e12b3d5209fe6ef",
+          "trigger_record_id": "INST-B"
+        },
+        {
+          "entry_hash": "3977ab9266792db3950b4a55b0e79a354b5b66916c7724e78ba531ea789106f9",
+          "event": "source_received",
+          "previous_hash": "4e142cb41296c13a559311f6ca910e274183cdcd4749cf6e2007309ed364bec1",
+          "processed_at": "2026-05-12T10:02:15Z",
+          "sequence": 3,
+          "source_hash": "dfbff2a2398ab65b021da2134bf9e2fd8e64a472910f8176efb2e80c20bfb092",
+          "trigger_record_id": "WO-AMBIGUOUS"
+        },
+        {
+          "decision": {
+            "accepted_equipment_id": null,
+            "candidate_equipment_ids": [
+              "EQ-CANDIDATE-A",
+              "EQ-CANDIDATE-B"
+            ],
+            "contradictions": [
+              {
+                "code": "COMPETING_INSTALLATIONS",
+                "evidence_ids": [
+                  "INST-A",
+                  "INST-B",
+                  "WO-AMBIGUOUS"
+                ]
+              }
+            ],
+            "disposition": "review_required",
+            "event_at": "2026-05-12T09:00:00Z",
+            "evidence_ids": [
+              "INST-A",
+              "INST-B",
+              "WO-AMBIGUOUS"
+            ],
+            "location_id": "FL-NE-SUB114-TX02",
+            "reason_code": "CONFLICTING_ASSET_EVIDENCE",
+            "record_type": "work_order",
+            "rule_version": "ogard-explicit-temporal-2",
+            "subject_record_id": "WO-AMBIGUOUS"
+          },
+          "entry_hash": "a135c2b3ab7740dd5772b86b754fe15e7d205f79bf68ab486365d5d7bda78dae",
+          "event": "decision_updated",
+          "previous_hash": "3977ab9266792db3950b4a55b0e79a354b5b66916c7724e78ba531ea789106f9",
+          "processed_at": "2026-05-12T10:02:15Z",
+          "sequence": 4,
+          "subject_record_id": "WO-AMBIGUOUS",
+          "supersedes_sequence": null,
+          "trigger_record_id": "WO-AMBIGUOUS"
+        }
+      ],
+      "case_id": "C03",
+      "decision_counts": {
+        "review_required": 1
+      },
+      "decisions": [
+        {
+          "accepted_equipment_id": null,
+          "candidate_equipment_ids": [
+            "EQ-CANDIDATE-A",
+            "EQ-CANDIDATE-B"
+          ],
+          "contradictions": [
+            {
+              "code": "COMPETING_INSTALLATIONS",
+              "evidence_ids": [
+                "INST-A",
+                "INST-B",
+                "WO-AMBIGUOUS"
+              ]
+            }
+          ],
+          "disposition": "review_required",
+          "event_at": "2026-05-12T09:00:00Z",
+          "evidence_ids": [
+            "INST-A",
+            "INST-B",
+            "WO-AMBIGUOUS"
+          ],
+          "location_id": "FL-NE-SUB114-TX02",
+          "reason_code": "CONFLICTING_ASSET_EVIDENCE",
+          "record_type": "work_order",
+          "rule_version": "ogard-explicit-temporal-2",
+          "subject_record_id": "WO-AMBIGUOUS"
+        }
+      ],
+      "description": "Two source systems name different installed units for the same location and time. The work order has no equipment identifier. A scripted reviewer defers resolution while retaining both accounts.",
+      "input_ledger": [
+        {
+          "disposition": "context_evidence_retained",
+          "kind": "installation",
+          "record_id": "INST-A"
+        },
+        {
+          "disposition": "context_evidence_retained",
+          "kind": "installation",
+          "record_id": "INST-B"
+        },
+        {
+          "disposition": "review_required",
+          "kind": "work_order",
+          "record_id": "WO-AMBIGUOUS"
+        }
+      ],
+      "limits": [
+        "Explicit identifiers and installation intervals only; no similarity or derived-status calculation.",
+        "Reviewer names and roles are synthetic declarations, not authenticated human identities.",
+        "Hash links support consistency checks, not tamper-proof storage."
+      ],
+      "source_hash": "9e32b755346c8d430bdeb3d115c934d160a095e77057014c213be9b4f6612ad2",
+      "source_records": [
+        {
+          "equipment_id": "EQ-CANDIDATE-A",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:00:00Z",
+          "record_id": "INST-A",
+          "source_system": "synthetic_system_a",
+          "type": "installation",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "equipment_id": "EQ-CANDIDATE-B",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:00:00Z",
+          "record_id": "INST-B",
+          "source_system": "synthetic_system_b",
+          "type": "installation",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "equipment_id": null,
+          "event_at": "2026-05-12T09:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:02:15Z",
+          "record_id": "WO-AMBIGUOUS",
+          "source_system": "synthetic_cmms",
+          "type": "work_order"
+        }
+      ],
+      "title": "Competing histories remain unresolved"
+    },
+    {
+      "audit": [
+        {
+          "entry_hash": "b57b1572d99213e224d91b270d5e8c9b36aa3ab425e7087312cfbedd8b5dc617",
+          "event": "source_received",
+          "previous_hash": null,
+          "processed_at": "2026-05-12T10:00:00Z",
+          "sequence": 1,
+          "source_hash": "ed8988ab9fcbec7b04d454c66c49cff44b01e6ac001160b0c9343ad27675517e",
+          "trigger_record_id": "EV-INST-OLD"
+        },
+        {
+          "entry_hash": "822b1cc2c95973bf9c9c6d6ce132071e90a1bf7b6b618bcf062cf422fbd17fd8",
+          "event": "source_received",
+          "previous_hash": "b57b1572d99213e224d91b270d5e8c9b36aa3ab425e7087312cfbedd8b5dc617",
+          "processed_at": "2026-05-12T10:00:00Z",
+          "sequence": 2,
+          "source_hash": "3458f16c8c71aae810a8eea649b710f4144c5bbe9943d2ae39b309f3879ea1dc",
+          "trigger_record_id": "EV-INST-NEW"
+        },
+        {
+          "entry_hash": "faf149ceb0c494c54ab4e5890ec8d5a58518e5ae71d01b8da0258a4486c9cdda",
+          "event": "source_received",
+          "previous_hash": "822b1cc2c95973bf9c9c6d6ce132071e90a1bf7b6b618bcf062cf422fbd17fd8",
+          "processed_at": "2026-05-12T10:02:15Z",
+          "sequence": 3,
+          "source_hash": "ece02de7118978e4d859c27ad1fd90a6387e0af0683e1e1aa5b19eda16bcbb27",
+          "trigger_record_id": "WO-CLEAN"
+        },
+        {
+          "decision": {
+            "accepted_equipment_id": "EQ-TR-NEW-01",
+            "candidate_equipment_ids": [
+              "EQ-TR-NEW-01"
+            ],
+            "contradictions": [],
+            "disposition": "accepted_automatic",
+            "event_at": "2026-05-12T09:00:00Z",
+            "evidence_ids": [
+              "EV-INST-NEW",
+              "WO-CLEAN"
+            ],
+            "location_id": "FL-NE-SUB114-TX02",
+            "reason_code": "EXPLICIT_ID_CORROBORATED_BY_INSTALLATION",
+            "record_type": "work_order",
+            "rule_version": "ogard-explicit-temporal-2",
+            "subject_record_id": "WO-CLEAN"
+          },
+          "entry_hash": "399240767418fdd48c7bc3db5a7114ee844348d153623345e25d03a9dc2a6747",
+          "event": "decision_updated",
+          "previous_hash": "faf149ceb0c494c54ab4e5890ec8d5a58518e5ae71d01b8da0258a4486c9cdda",
+          "processed_at": "2026-05-12T10:02:15Z",
+          "sequence": 4,
+          "subject_record_id": "WO-CLEAN",
+          "supersedes_sequence": null,
+          "trigger_record_id": "WO-CLEAN"
+        }
+      ],
+      "case_id": "C04",
+      "decision_counts": {
+        "accepted_automatic": 1
+      },
+      "decisions": [
+        {
+          "accepted_equipment_id": "EQ-TR-NEW-01",
+          "candidate_equipment_ids": [
+            "EQ-TR-NEW-01"
+          ],
+          "contradictions": [],
+          "disposition": "accepted_automatic",
+          "event_at": "2026-05-12T09:00:00Z",
+          "evidence_ids": [
+            "EV-INST-NEW",
+            "WO-CLEAN"
+          ],
+          "location_id": "FL-NE-SUB114-TX02",
+          "reason_code": "EXPLICIT_ID_CORROBORATED_BY_INSTALLATION",
+          "record_type": "work_order",
+          "rule_version": "ogard-explicit-temporal-2",
+          "subject_record_id": "WO-CLEAN"
+        }
+      ],
+      "description": "A clean work order names the equipment shown by the installation history at the event time. This control case checks that consistent evidence can be used without unnecessary review.",
+      "input_ledger": [
+        {
+          "disposition": "context_evidence_retained",
+          "kind": "installation",
+          "record_id": "EV-INST-OLD"
+        },
+        {
+          "disposition": "context_evidence_retained",
+          "kind": "installation",
+          "record_id": "EV-INST-NEW"
+        },
+        {
+          "disposition": "accepted_automatic",
+          "kind": "work_order",
+          "record_id": "WO-CLEAN"
+        }
+      ],
+      "limits": [
+        "Explicit identifiers and installation intervals only; no similarity or derived-status calculation.",
+        "Reviewer names and roles are synthetic declarations, not authenticated human identities.",
+        "Hash links support consistency checks, not tamper-proof storage."
+      ],
+      "source_hash": "1628443b586dc280f3e2891f15c6af5b9b59d70a52312ab8e96713b7edac5f0c",
+      "source_records": [
+        {
+          "equipment_id": "EQ-TR-OLD-01",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:00:00Z",
+          "record_id": "EV-INST-OLD",
+          "source_system": "synthetic_installation_history",
+          "type": "installation",
+          "valid_from": "2020-03-01T00:00:00Z",
+          "valid_to": "2026-04-15T00:00:00Z"
+        },
+        {
+          "equipment_id": "EQ-TR-NEW-01",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:00:00Z",
+          "record_id": "EV-INST-NEW",
+          "source_system": "synthetic_installation_history",
+          "type": "installation",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "equipment_id": "EQ-TR-NEW-01",
+          "event_at": "2026-05-12T09:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:02:15Z",
+          "record_id": "WO-CLEAN",
+          "source_system": "synthetic_cmms",
+          "type": "work_order"
+        }
+      ],
+      "title": "A supported identifier is accepted automatically"
+    },
+    {
+      "audit": [
+        {
+          "entry_hash": "4832d93d3f18508277411290e331dbc914e7f9cca80d62c23785f1c92656f3d8",
+          "event": "source_received",
+          "previous_hash": null,
+          "processed_at": "2026-05-12T10:00:00Z",
+          "sequence": 1,
+          "source_hash": "a5d0468b753a5f75ac4cc55233e06db979a170620e4da97ab9cb255a2cd6aeba",
+          "trigger_record_id": "INST-SHARED-ERROR"
+        },
+        {
+          "entry_hash": "ddf8b0fd75e98a3280eb7ed62965dffd2c5e4db2a98a0d8a556fc8ba6c9a128a",
+          "event": "source_received",
+          "previous_hash": "4832d93d3f18508277411290e331dbc914e7f9cca80d62c23785f1c92656f3d8",
+          "processed_at": "2026-05-12T10:02:15Z",
+          "sequence": 2,
+          "source_hash": "0cb227c7c09af7ad4ae97279e2b965ea343fe60841029d0258af9a20b6394e71",
+          "trigger_record_id": "WO-SHARED-ERROR"
+        },
+        {
+          "decision": {
+            "accepted_equipment_id": "EQ-SHARED-WRONG",
+            "candidate_equipment_ids": [
+              "EQ-SHARED-WRONG"
+            ],
+            "contradictions": [],
+            "disposition": "accepted_automatic",
+            "event_at": "2026-05-12T09:00:00Z",
+            "evidence_ids": [
+              "INST-SHARED-ERROR",
+              "WO-SHARED-ERROR"
+            ],
+            "location_id": "FL-NE-SUB114-TX02",
+            "reason_code": "EXPLICIT_ID_CORROBORATED_BY_INSTALLATION",
+            "record_type": "work_order",
+            "rule_version": "ogard-explicit-temporal-2",
+            "subject_record_id": "WO-SHARED-ERROR"
+          },
+          "entry_hash": "6becf86adb1a3c3fda3faf1739e2b4b9ae3b0be421a658e93054edf11d91bb2c",
+          "event": "decision_updated",
+          "previous_hash": "ddf8b0fd75e98a3280eb7ed62965dffd2c5e4db2a98a0d8a556fc8ba6c9a128a",
+          "processed_at": "2026-05-12T10:02:15Z",
+          "sequence": 3,
+          "subject_record_id": "WO-SHARED-ERROR",
+          "supersedes_sequence": null,
+          "trigger_record_id": "WO-SHARED-ERROR"
+        }
+      ],
+      "case_id": "C05",
+      "decision_counts": {
+        "accepted_automatic": 1
+      },
+      "decisions": [
+        {
+          "accepted_equipment_id": "EQ-SHARED-WRONG",
+          "candidate_equipment_ids": [
+            "EQ-SHARED-WRONG"
+          ],
+          "contradictions": [],
+          "disposition": "accepted_automatic",
+          "event_at": "2026-05-12T09:00:00Z",
+          "evidence_ids": [
+            "INST-SHARED-ERROR",
+            "WO-SHARED-ERROR"
+          ],
+          "location_id": "FL-NE-SUB114-TX02",
+          "reason_code": "EXPLICIT_ID_CORROBORATED_BY_INSTALLATION",
+          "record_type": "work_order",
+          "rule_version": "ogard-explicit-temporal-2",
+          "subject_record_id": "WO-SHARED-ERROR"
+        }
+      ],
+      "description": "An installation record and work order inherit the same incorrect upstream equipment identifier. With no contradictory input, the implementation accepts that association. A separate synthetic truth label identifies the error.",
+      "input_ledger": [
+        {
+          "disposition": "context_evidence_retained",
+          "kind": "installation",
+          "record_id": "INST-SHARED-ERROR"
+        },
+        {
+          "disposition": "accepted_automatic",
+          "kind": "work_order",
+          "record_id": "WO-SHARED-ERROR"
+        }
+      ],
+      "limits": [
+        "Explicit identifiers and installation intervals only; no similarity or derived-status calculation.",
+        "Reviewer names and roles are synthetic declarations, not authenticated human identities.",
+        "Hash links support consistency checks, not tamper-proof storage."
+      ],
+      "source_hash": "795d3ebbb0db2a30c06553d9238a9a7b0bc2dc469e2045b8f84453825875fd8a",
+      "source_records": [
+        {
+          "equipment_id": "EQ-SHARED-WRONG",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:00:00Z",
+          "record_id": "INST-SHARED-ERROR",
+          "source_system": "synthetic_register_copy",
+          "type": "installation",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "equipment_id": "EQ-SHARED-WRONG",
+          "event_at": "2026-05-12T09:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "received_at": "2026-05-12T10:02:15Z",
+          "record_id": "WO-SHARED-ERROR",
+          "source_system": "synthetic_cmms",
+          "type": "work_order"
+        }
+      ],
+      "title": "Known limitation: several sources repeat the same wrong identity"
+    }
+  ],
+  "input_hash": "92aa59ed68f9b6a5f0915163bf67793058fd4c5650c3e01e0047851de3246396",
+  "rule_version": "ogard-explicit-temporal-2",
+  "schema_version": "ogard-demo-output-1"
+}

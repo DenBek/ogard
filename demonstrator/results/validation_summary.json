@@ -1,0 +1,67 @@
+{
+  "baseline_automatic": {
+    "acceptance_coverage": {
+      "denominator": 6,
+      "numerator": 5
+    },
+    "accepted": 5,
+    "accepted_correct": 3,
+    "accepted_incorrect": 2,
+    "accepted_without_known_truth": 0,
+    "decision_count": 6,
+    "incorrect_among_scorable_accepts": {
+      "denominator": 5,
+      "numerator": 2
+    },
+    "known_truth_count": 5,
+    "rejected": 0,
+    "review_required": 0,
+    "unresolved": 1
+  },
+  "case_count": 5,
+  "decision_count": 6,
+  "independent_external_review": "not_established_by_this_run",
+  "ogard_automatic": {
+    "acceptance_coverage": {
+      "denominator": 6,
+      "numerator": 3
+    },
+    "accepted": 3,
+    "accepted_correct": 2,
+    "accepted_incorrect": 1,
+    "accepted_without_known_truth": 0,
+    "decision_count": 6,
+    "incorrect_among_scorable_accepts": {
+      "denominator": 3,
+      "numerator": 1
+    },
+    "known_truth_count": 5,
+    "rejected": 0,
+    "review_required": 3,
+    "unresolved": 0
+  },
+  "ogard_with_scripted_review": {
+    "acceptance_coverage": {
+      "denominator": 6,
+      "numerator": 4
+    },
+    "accepted": 4,
+    "accepted_correct": 3,
+    "accepted_incorrect": 1,
+    "accepted_without_known_truth": 0,
+    "decision_count": 6,
+    "incorrect_among_scorable_accepts": {
+      "denominator": 4,
+      "numerator": 1
+    },
+    "known_truth_count": 5,
+    "rejected": 0,
+    "review_required": 1,
+    "unresolved": 1
+  },
+  "release_version": "0.2.0",
+  "source_layouts_verified": 2,
+  "tests_failed": 0,
+  "tests_passed": 33,
+  "workflow_checks_passed": true
+}

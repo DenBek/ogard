@@ -1,3 +1,15 @@
+# Changelog
+
+## 0.2.0 - 23 September 2026
+
+- Integrated the original executable transformer demonstrator after reproducing its 15 tests and saved deterministic outputs.
+- Added strict input checks and an explicitly mapped second synthetic source layout, with identical normalized inputs and processing results.
+- Added an explicit-ID-or-current-location baseline, automatic-only comparison, counts and denominators, and per-record results.
+- Kept the shared-source identity error visible as an incorrect automatic acceptance.
+- Added one-command release verification, regression coverage, output snapshots, fingerprints and GitHub validation.
+- Aligned the website, README, citation, license scope and release inventory; retained the four original version 0.1 methodology PDFs with their original labels.
+- Added complete reproduction instructions and a recorded validation procedure. No independent external assessment or operator deployment is claimed by this release.
+
 # Change Log
 
 ## Draft Release Candidate v0.1, website integration - August 2026

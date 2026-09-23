@@ -202,3 +202,10 @@ tbody tr:last-child td { border-bottom: 0; }
   body { color: black; background: white; }
   a { color: black; text-decoration: underline; }
 }
+
+/* Executable release content */
+.code-panel{background:#edf3f7;border-radius:10px;padding:20px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6}
+.table-wrap{overflow-x:auto}
+.table-wrap table{width:100%;border-collapse:collapse;min-width:540px}
+.table-wrap th,.table-wrap td{text-align:left;padding:14px;border-bottom:1px solid #dce4eb;vertical-align:top}
+.table-wrap th{background:#eaf0f5}

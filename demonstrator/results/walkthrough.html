@@ -1,0 +1,281 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OGARD Reference Implementation Results</title><style>
+:root{color-scheme:light;font-family:Arial,sans-serif;color:#203042;background:#f2f5f8}*{box-sizing:border-box}body{margin:0}main{max-width:1080px;margin:0 auto;padding:40px 24px 64px}h1{font-size:36px;line-height:1.15;margin:10px 0 18px}h2{font-size:23px;line-height:1.3;margin:6px 0 16px}p,li{font-size:16px;line-height:1.65}.eyebrow{font-size:12px;font-weight:bold;letter-spacing:.12em;color:#376d7e;text-transform:uppercase}.intro,.case{background:white;border:1px solid #d9e2e9;border-radius:12px;padding:28px;margin:22px 0}.summary{background:#eaf2f5;border-left:4px solid #376d7e;padding:16px 20px}.warning{background:#fff1d9;border-left:4px solid #ac6500;padding:14px 18px}.finding{font-weight:bold}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5}th{text-align:left;background:#eaf0f5}td,th{padding:12px;border-bottom:1px solid #dce4eb;vertical-align:top;overflow-wrap:anywhere}details{margin-top:12px;border-top:1px solid #e3e8ed;padding-top:12px}summary{cursor:pointer;color:#285e71;font-weight:bold}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:16px;font-size:12px;line-height:1.5}footer{overflow-wrap:anywhere;font-size:13px;line-height:1.6;color:#536373}a{color:#285e71}@media(max-width:640px){main{padding:18px 12px}.case,.intro{padding:18px}h1{font-size:28px}}@media print{body{background:white}main{padding:0}.case{break-inside:avoid}details{display:none}}
+</style></head><body><main><p class="eyebrow">OGARD | Executable reference implementation | 0.2.0</p>
+<h1>Which transformer does the record concern?</h1>
+<section class="intro"><p>A utility replaces a transformer while retaining its location number. Maintenance records and telemetry references may describe different equipment or different moments in its history. This demonstrator processes those records and makes the resulting associations, unresolved questions and review decisions inspectable.</p>
+<p class="summary"><strong>What was executed:</strong> 5 selected synthetic cases, producing 6 equipment-association decisions. The walkthrough below is generated from the resulting files.</p>
+<p><strong>What the results show:</strong> the implementation handles the stated historical-mapping and review cases, while preserving conflicting evidence. It also accepts a wrong association in a constructed case where sources repeat the same upstream error.</p>
+<p><strong>How to read this:</strong> “accepted by scripted review” means a predeclared synthetic review event was replayed. This report records automated execution and scripted synthetic review. It does not record an independent external review. These selected cases do not establish utility adoption, operational performance or national impact.</p></section>
+<section class="intro"><h2>Comparison on six decisions</h2><div class="tablewrap"><table><thead><tr><th>Measure</th><th>Baseline automatic</th><th>OGARD automatic</th><th>After scripted review</th></tr></thead><tbody><tr><th scope="row">Accepted links</th><td>5</td><td>3</td><td>4</td></tr><tr><th scope="row">Correct accepted links</th><td>3</td><td>2</td><td>3</td></tr><tr><th scope="row">Incorrect accepted links</th><td>2</td><td>1</td><td>1</td></tr><tr><th scope="row">Review required</th><td>0</td><td>3</td><td>1</td></tr><tr><th scope="row">Unresolved</th><td>1</td><td>0</td><td>1</td></tr></tbody></table></div><p>The baseline uses an explicit equipment identifier, or a unique current installation at receipt time when that identifier is missing. Both automatic runs exclude all review events and use identical inputs. The final column is a separate scripted-review demonstration.</p><p>Five decisions have known synthetic physical truth. The competing-installation case has no single truth label. Unaccepted decisions do not count as correct equipment matches. These selected cases do not estimate accuracy on utility data.</p><p>OGARD avoids the baseline’s wrong automatic telemetry association while referring more records for review. Both methods accept the shared-source identity error. The baseline correctly accepts the identifier-free work order in this example; OGARD requires review, showing the workload trade-off.</p></section><section class="case"><p class="eyebrow">C01</p><h2>Replacement: accepted work order, unresolved telemetry</h2>
+<p>A work order omits the serial number. The new installation record supports a candidate, a scripted asset reviewer accepts it, and a historian link still naming the former unit remains disputed.</p><div class="tablewrap"><table><thead><tr><th>Record</th><th>Actual outcome</th><th>Equipment association</th><th>Conflicting evidence</th></tr></thead><tbody><tr><td>EV-WO-2026-0512</td><td>Accepted by scripted review</td><td>EQ-TR-NEW-01</td><td>No conflict surfaced</td></tr><tr><td>EV-HIST-TX2-OIL</td><td>Review required</td><td>No accepted association</td><td>telemetry equipment conflict</td></tr></tbody></table></div>
+<p class="finding">The scripted work-order acceptance leaves the historian conflict unresolved.</p>
+<details><summary>Inspect the decision timeline</summary><pre>[
+  {
+    &quot;when&quot;: &quot;2026-05-12T10:02:15Z&quot;,
+    &quot;trigger&quot;: &quot;EV-WO-2026-0512&quot;,
+    &quot;record&quot;: &quot;EV-WO-2026-0512&quot;,
+    &quot;outcome&quot;: &quot;Unresolved&quot;,
+    &quot;equipment&quot;: null
+  },
+  {
+    &quot;when&quot;: &quot;2026-05-12T10:02:30Z&quot;,
+    &quot;trigger&quot;: &quot;EV-INST-NEW&quot;,
+    &quot;record&quot;: &quot;EV-WO-2026-0512&quot;,
+    &quot;outcome&quot;: &quot;Review required&quot;,
+    &quot;equipment&quot;: null
+  },
+  {
+    &quot;when&quot;: &quot;2026-05-12T10:02:35Z&quot;,
+    &quot;trigger&quot;: &quot;EV-HIST-TX2-OIL&quot;,
+    &quot;record&quot;: &quot;EV-HIST-TX2-OIL&quot;,
+    &quot;outcome&quot;: &quot;Review required&quot;,
+    &quot;equipment&quot;: null
+  },
+  {
+    &quot;when&quot;: &quot;2026-05-12T10:20:00Z&quot;,
+    &quot;trigger&quot;: &quot;RA-WO-2026-0512&quot;,
+    &quot;record&quot;: &quot;EV-WO-2026-0512&quot;,
+    &quot;outcome&quot;: &quot;Accepted by scripted review&quot;,
+    &quot;equipment&quot;: &quot;EQ-TR-NEW-01&quot;
+  }
+]</pre></details>
+<details><summary>Inspect the synthetic source records</summary><pre>[
+  {
+    &quot;record_id&quot;: &quot;EV-WO-2026-0512&quot;,
+    &quot;type&quot;: &quot;work_order&quot;,
+    &quot;source_system&quot;: &quot;synthetic_cmms&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:02:15Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: null,
+    &quot;event_at&quot;: &quot;2026-05-12T09:20:00Z&quot;
+  },
+  {
+    &quot;record_id&quot;: &quot;EV-INST-OLD&quot;,
+    &quot;type&quot;: &quot;installation&quot;,
+    &quot;source_system&quot;: &quot;synthetic_installation_history&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:02:25Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-OLD-01&quot;,
+    &quot;valid_from&quot;: &quot;2020-03-01T00:00:00Z&quot;,
+    &quot;valid_to&quot;: &quot;2026-04-15T00:00:00Z&quot;
+  },
+  {
+    &quot;record_id&quot;: &quot;EV-INST-NEW&quot;,
+    &quot;type&quot;: &quot;installation&quot;,
+    &quot;source_system&quot;: &quot;synthetic_installation_history&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:02:30Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-NEW-01&quot;,
+    &quot;valid_from&quot;: &quot;2026-04-15T00:00:00Z&quot;,
+    &quot;valid_to&quot;: null
+  },
+  {
+    &quot;record_id&quot;: &quot;EV-HIST-TX2-OIL&quot;,
+    &quot;type&quot;: &quot;telemetry_link&quot;,
+    &quot;source_system&quot;: &quot;synthetic_historian&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:02:35Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-OLD-01&quot;,
+    &quot;event_at&quot;: &quot;2026-05-12T09:15:00Z&quot;
+  },
+  {
+    &quot;record_id&quot;: &quot;RA-WO-2026-0512&quot;,
+    &quot;type&quot;: &quot;review&quot;,
+    &quot;source_system&quot;: &quot;synthetic_review_log&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:20:00Z&quot;,
+    &quot;subject_record_id&quot;: &quot;EV-WO-2026-0512&quot;,
+    &quot;actor&quot;: &quot;SCRIPTED_REVIEWER_01&quot;,
+    &quot;role&quot;: &quot;asset_reviewer&quot;,
+    &quot;action&quot;: &quot;accept&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-NEW-01&quot;,
+    &quot;reason&quot;: &quot;The dated installation evidence supports the replacement unit for this work-order event.&quot;,
+    &quot;evidence_ids&quot;: [
+      &quot;EV-WO-2026-0512&quot;,
+      &quot;EV-INST-NEW&quot;
+    ]
+  }
+]</pre></details></section><section class="case"><p class="eyebrow">C02</p><h2>A late record belongs to the former transformer</h2>
+<p>A work order received in May describes an April 10 event. Its physical identifier and the installation history agree on the former transformer, although another unit is now installed.</p><div class="tablewrap"><table><thead><tr><th>Record</th><th>Actual outcome</th><th>Equipment association</th><th>Conflicting evidence</th></tr></thead><tbody><tr><td>WO-LATE</td><td>Accepted automatically</td><td>EQ-TR-OLD-01</td><td>No conflict surfaced</td></tr></tbody></table></div>
+<p class="finding">The late work order attaches to the former unit using event time.</p>
+<details><summary>Inspect the decision timeline</summary><pre>[
+  {
+    &quot;when&quot;: &quot;2026-05-13T12:00:00Z&quot;,
+    &quot;trigger&quot;: &quot;WO-LATE&quot;,
+    &quot;record&quot;: &quot;WO-LATE&quot;,
+    &quot;outcome&quot;: &quot;Accepted automatically&quot;,
+    &quot;equipment&quot;: &quot;EQ-TR-OLD-01&quot;
+  }
+]</pre></details>
+<details><summary>Inspect the synthetic source records</summary><pre>[
+  {
+    &quot;record_id&quot;: &quot;EV-INST-OLD&quot;,
+    &quot;type&quot;: &quot;installation&quot;,
+    &quot;source_system&quot;: &quot;synthetic_installation_history&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:00:00Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-OLD-01&quot;,
+    &quot;valid_from&quot;: &quot;2020-03-01T00:00:00Z&quot;,
+    &quot;valid_to&quot;: &quot;2026-04-15T00:00:00Z&quot;
+  },
+  {
+    &quot;record_id&quot;: &quot;EV-INST-NEW&quot;,
+    &quot;type&quot;: &quot;installation&quot;,
+    &quot;source_system&quot;: &quot;synthetic_installation_history&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:00:00Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-NEW-01&quot;,
+    &quot;valid_from&quot;: &quot;2026-04-15T00:00:00Z&quot;,
+    &quot;valid_to&quot;: null
+  },
+  {
+    &quot;record_id&quot;: &quot;WO-LATE&quot;,
+    &quot;type&quot;: &quot;work_order&quot;,
+    &quot;source_system&quot;: &quot;synthetic_cmms&quot;,
+    &quot;received_at&quot;: &quot;2026-05-13T12:00:00Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-OLD-01&quot;,
+    &quot;event_at&quot;: &quot;2026-04-10T09:00:00Z&quot;
+  }
+]</pre></details></section><section class="case"><p class="eyebrow">C03</p><h2>Competing histories remain unresolved</h2>
+<p>Two source systems name different installed units for the same location and time. The work order has no equipment identifier. A scripted reviewer defers resolution while retaining both accounts.</p><div class="tablewrap"><table><thead><tr><th>Record</th><th>Actual outcome</th><th>Equipment association</th><th>Conflicting evidence</th></tr></thead><tbody><tr><td>WO-AMBIGUOUS</td><td>Unresolved</td><td>No accepted association</td><td>competing installations</td></tr></tbody></table></div>
+<p class="finding">The method and scripted review preserve uncertainty and competing evidence.</p>
+<details><summary>Inspect the decision timeline</summary><pre>[
+  {
+    &quot;when&quot;: &quot;2026-05-12T10:02:15Z&quot;,
+    &quot;trigger&quot;: &quot;WO-AMBIGUOUS&quot;,
+    &quot;record&quot;: &quot;WO-AMBIGUOUS&quot;,
+    &quot;outcome&quot;: &quot;Review required&quot;,
+    &quot;equipment&quot;: null
+  },
+  {
+    &quot;when&quot;: &quot;2026-05-12T10:30:00Z&quot;,
+    &quot;trigger&quot;: &quot;REVIEW-DEFER&quot;,
+    &quot;record&quot;: &quot;WO-AMBIGUOUS&quot;,
+    &quot;outcome&quot;: &quot;Unresolved&quot;,
+    &quot;equipment&quot;: null
+  }
+]</pre></details>
+<details><summary>Inspect the synthetic source records</summary><pre>[
+  {
+    &quot;record_id&quot;: &quot;INST-A&quot;,
+    &quot;type&quot;: &quot;installation&quot;,
+    &quot;source_system&quot;: &quot;synthetic_system_a&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:00:00Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-CANDIDATE-A&quot;,
+    &quot;valid_from&quot;: &quot;2026-04-15T00:00:00Z&quot;,
+    &quot;valid_to&quot;: null
+  },
+  {
+    &quot;record_id&quot;: &quot;INST-B&quot;,
+    &quot;type&quot;: &quot;installation&quot;,
+    &quot;source_system&quot;: &quot;synthetic_system_b&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:00:00Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-CANDIDATE-B&quot;,
+    &quot;valid_from&quot;: &quot;2026-04-15T00:00:00Z&quot;,
+    &quot;valid_to&quot;: null
+  },
+  {
+    &quot;record_id&quot;: &quot;WO-AMBIGUOUS&quot;,
+    &quot;type&quot;: &quot;work_order&quot;,
+    &quot;source_system&quot;: &quot;synthetic_cmms&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:02:15Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: null,
+    &quot;event_at&quot;: &quot;2026-05-12T09:00:00Z&quot;
+  },
+  {
+    &quot;record_id&quot;: &quot;REVIEW-DEFER&quot;,
+    &quot;type&quot;: &quot;review&quot;,
+    &quot;source_system&quot;: &quot;synthetic_review_log&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:30:00Z&quot;,
+    &quot;subject_record_id&quot;: &quot;WO-AMBIGUOUS&quot;,
+    &quot;actor&quot;: &quot;SCRIPTED_REVIEWER_01&quot;,
+    &quot;role&quot;: &quot;asset_reviewer&quot;,
+    &quot;action&quot;: &quot;defer&quot;,
+    &quot;reason&quot;: &quot;The available records do not establish which installation history is correct.&quot;,
+    &quot;evidence_ids&quot;: [
+      &quot;WO-AMBIGUOUS&quot;,
+      &quot;INST-A&quot;,
+      &quot;INST-B&quot;
+    ]
+  }
+]</pre></details></section><section class="case"><p class="eyebrow">C04</p><h2>A supported identifier is accepted automatically</h2>
+<p>A clean work order names the equipment shown by the installation history at the event time. This control case checks that consistent evidence can be used without unnecessary review.</p><div class="tablewrap"><table><thead><tr><th>Record</th><th>Actual outcome</th><th>Equipment association</th><th>Conflicting evidence</th></tr></thead><tbody><tr><td>WO-CLEAN</td><td>Accepted automatically</td><td>EQ-TR-NEW-01</td><td>No conflict surfaced</td></tr></tbody></table></div>
+<p class="finding">Consistent explicit identity and installation evidence are accepted.</p>
+<details><summary>Inspect the decision timeline</summary><pre>[
+  {
+    &quot;when&quot;: &quot;2026-05-12T10:02:15Z&quot;,
+    &quot;trigger&quot;: &quot;WO-CLEAN&quot;,
+    &quot;record&quot;: &quot;WO-CLEAN&quot;,
+    &quot;outcome&quot;: &quot;Accepted automatically&quot;,
+    &quot;equipment&quot;: &quot;EQ-TR-NEW-01&quot;
+  }
+]</pre></details>
+<details><summary>Inspect the synthetic source records</summary><pre>[
+  {
+    &quot;record_id&quot;: &quot;EV-INST-OLD&quot;,
+    &quot;type&quot;: &quot;installation&quot;,
+    &quot;source_system&quot;: &quot;synthetic_installation_history&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:00:00Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-OLD-01&quot;,
+    &quot;valid_from&quot;: &quot;2020-03-01T00:00:00Z&quot;,
+    &quot;valid_to&quot;: &quot;2026-04-15T00:00:00Z&quot;
+  },
+  {
+    &quot;record_id&quot;: &quot;EV-INST-NEW&quot;,
+    &quot;type&quot;: &quot;installation&quot;,
+    &quot;source_system&quot;: &quot;synthetic_installation_history&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:00:00Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-NEW-01&quot;,
+    &quot;valid_from&quot;: &quot;2026-04-15T00:00:00Z&quot;,
+    &quot;valid_to&quot;: null
+  },
+  {
+    &quot;record_id&quot;: &quot;WO-CLEAN&quot;,
+    &quot;type&quot;: &quot;work_order&quot;,
+    &quot;source_system&quot;: &quot;synthetic_cmms&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:02:15Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-TR-NEW-01&quot;,
+    &quot;event_at&quot;: &quot;2026-05-12T09:00:00Z&quot;
+  }
+]</pre></details></section><section class="case"><p class="eyebrow">C05</p><h2>Known limitation: several sources repeat the same wrong identity</h2>
+<p>An installation record and work order inherit the same incorrect upstream equipment identifier. With no contradictory input, the implementation accepts that association. A separate synthetic truth label identifies the error.</p><div class="tablewrap"><table><thead><tr><th>Record</th><th>Actual outcome</th><th>Equipment association</th><th>Conflicting evidence</th></tr></thead><tbody><tr><td>WO-SHARED-ERROR</td><td>Accepted automatically</td><td>EQ-SHARED-WRONG</td><td>No conflict surfaced</td></tr></tbody></table></div>
+<p class="finding">One wrong automatic association is accepted. Agreement among sources cannot establish physical truth when those sources inherit the same error.</p><p class="warning"><strong>Observed limitation:</strong> an incorrect equipment association was accepted. The conflicting physical truth is absent from the processing inputs.</p>
+<details><summary>Inspect the decision timeline</summary><pre>[
+  {
+    &quot;when&quot;: &quot;2026-05-12T10:02:15Z&quot;,
+    &quot;trigger&quot;: &quot;WO-SHARED-ERROR&quot;,
+    &quot;record&quot;: &quot;WO-SHARED-ERROR&quot;,
+    &quot;outcome&quot;: &quot;Accepted automatically&quot;,
+    &quot;equipment&quot;: &quot;EQ-SHARED-WRONG&quot;
+  }
+]</pre></details>
+<details><summary>Inspect the synthetic source records</summary><pre>[
+  {
+    &quot;record_id&quot;: &quot;INST-SHARED-ERROR&quot;,
+    &quot;type&quot;: &quot;installation&quot;,
+    &quot;source_system&quot;: &quot;synthetic_register_copy&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:00:00Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-SHARED-WRONG&quot;,
+    &quot;valid_from&quot;: &quot;2026-04-15T00:00:00Z&quot;,
+    &quot;valid_to&quot;: null
+  },
+  {
+    &quot;record_id&quot;: &quot;WO-SHARED-ERROR&quot;,
+    &quot;type&quot;: &quot;work_order&quot;,
+    &quot;source_system&quot;: &quot;synthetic_cmms&quot;,
+    &quot;received_at&quot;: &quot;2026-05-12T10:02:15Z&quot;,
+    &quot;location_id&quot;: &quot;FL-NE-SUB114-TX02&quot;,
+    &quot;equipment_id&quot;: &quot;EQ-SHARED-WRONG&quot;,
+    &quot;event_at&quot;: &quot;2026-05-12T09:00:00Z&quot;
+  }
+]</pre></details></section>
+<section class="intro"><h2>Results and interpretation</h2><p>The run produced 3 automatic acceptances; 1 disagreed with the separately stored synthetic physical truth. There was 1 acceptance through scripted review. Counts describe these selected examples and are not an accuracy estimate for utility data.</p><p>The next useful review is whether the records, decision rules and review responsibilities represent a meaningful electricity-network workflow, and whether another engineer can reproduce the outputs.</p><p><strong>Current boundary:</strong> this reference implementation implements explicit identity, installation intervals and review records. It does not implement the full published benchmark, similarity scoring, derived asset statuses or operational control.</p></section>
+<footer>Underlying methodology: OGARD, Deniz Bektas. Development provenance is recorded in the repository. This execution report does not represent a third-party evaluation. Original methodology and structured example: <a href="https://github.com/DenBek/ogard">OGARD repository</a>. Rule version: ogard-explicit-temporal-2. Input SHA-256: 62497927829fd566eb29f0270fa19716f55f8f4a0f97d873d41426f0f9fc225f.</footer></main></body></html>

@@ -45,6 +45,7 @@
       <a href="index.html" class="nav-link">Home</a>
 <a href="framework.html" class="nav-link">Framework</a>
 <a href="architecture.html" class="nav-link">Architecture</a>
+<a href="implementation.html" class="nav-link">Implementation</a>
 <a href="publications.html" aria-current="page" class="nav-link active">Publications</a>
 <a href="about.html" class="nav-link">About</a>
       <a class="nav-repo" href="https://github.com/DenBek/ogard">Repository</a>
@@ -56,8 +57,8 @@
 <section class="page-hero">
   <div class="container narrow">
     <span class="eyebrow">Publications and repository</span>
-    <h1>Four aligned papers and a small inspectable artifact package</h1>
-    <p>The current package is a draft release candidate. The papers define the method, implementation controls, architecture, and future benchmark methodology without reporting live operator outcomes or executed benchmark results.</p>
+    <h1>Methodology papers and reproducible software results</h1>
+    <p>The four original version 0.1 papers retain their design-release labels. The current executable release is 0.2.0. Its <a href="implementation.html">software and measured synthetic results</a> are provided separately and cover a focused subset of the broader methodology.</p>
   </div>
 </section>
 
@@ -108,6 +109,9 @@
     </div>
     <div class="repo-tree" aria-label="Repository structure">
 <pre><code>ogard/
+  demonstrator/
+  docs/
+  run_validation.py
   papers/
   diagrams/
   worked-example/
@@ -124,9 +128,9 @@
 <section class="section">
   <div class="container narrow">
     <span class="section-label">Suggested citation</span>
-    <h2>Cite the draft release candidate</h2>
+    <h2>Cite the executable reference release</h2>
     <div class="citation-box">
-      <p id="citation-text">Bektas, D. (2026). OGARD: Open Grid Asset Reliability Data Framework. Draft Release Candidate v0.1. https://github.com/DenBek/ogard</p>
+      <p id="citation-text">Bektas, D. (2026). OGARD: Open Grid Asset Reliability Data Framework. Executable Reference Release 0.2.0. https://github.com/DenBek/ogard</p>
       <button class="button secondary small" type="button" data-copy-target="#citation-text">Copy citation</button>
       <p class="copy-status" role="status" aria-live="polite"></p>
     </div>
@@ -139,12 +143,12 @@
     <div>
       <span class="section-label">Licensing</span>
       <h2>Reuse with clear attribution</h2>
-      <p>Documentation, diagrams, and structured synthetic examples are provided under CC BY 4.0. Original website code is provided under Apache License 2.0. See <a href="LICENSE.md">LICENSE.md</a> for scope.</p>
+      <p>Documentation, diagrams, and structured synthetic examples are provided under CC BY 4.0. Original executable and website code is provided under Apache License 2.0. See <a href="LICENSE.md">LICENSE.md</a> for scope.</p>
     </div>
     <div>
       <span class="section-label">Release boundary</span>
-      <h2>No results or operational validation are implied</h2>
-      <p>The presence of papers and synthetic artifacts does not establish utility adoption, production readiness, outage reduction, formal standards compliance, or physical asset truth.</p>
+      <h2>Synthetic results have a defined scope</h2>
+      <p>The release reports executed synthetic comparisons and repeatability checks. These establish behavior on the supplied cases, with a known identity error retained; they do not establish utility adoption, production readiness, outage reduction or formal standards compliance.</p>
     </div>
   </div>
 </section>
@@ -158,7 +162,7 @@
       <p>Open Grid Asset Reliability Data Framework</p>
     </div>
     <div>
-      <p><strong>Draft Release Candidate v0.1</strong></p>
+      <p><strong>Executable Reference Release 0.2.0</strong></p>
       <p>Documentation and diagrams: CC BY 4.0</p>
     </div>
     <div class="footer-links">
