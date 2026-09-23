@@ -1,0 +1,71 @@
+{
+  "schema_version": "ogard-demo-expectations-1",
+  "purpose": "Author-defined evaluation labels; never supplied to processing. Expected workflow behavior and hidden physical truth are distinct.",
+  "cases": {
+    "C01": {
+      "decisions": {
+        "EV-WO-2026-0512": {
+          "disposition": "accepted_review",
+          "accepted_equipment_id": "EQ-TR-NEW-01",
+          "physical_equipment_id": "EQ-TR-NEW-01",
+          "contradiction_codes": []
+        },
+        "EV-HIST-TX2-OIL": {
+          "disposition": "review_required",
+          "accepted_equipment_id": null,
+          "physical_equipment_id": "EQ-TR-NEW-01",
+          "contradiction_codes": [
+            "TELEMETRY_EQUIPMENT_CONFLICT"
+          ]
+        }
+      },
+      "interpretation": "The scripted work-order acceptance leaves the historian conflict unresolved."
+    },
+    "C02": {
+      "decisions": {
+        "WO-LATE": {
+          "disposition": "accepted_automatic",
+          "accepted_equipment_id": "EQ-TR-OLD-01",
+          "physical_equipment_id": "EQ-TR-OLD-01",
+          "contradiction_codes": []
+        }
+      },
+      "interpretation": "The late work order attaches to the former unit using event time."
+    },
+    "C03": {
+      "decisions": {
+        "WO-AMBIGUOUS": {
+          "disposition": "unresolved",
+          "accepted_equipment_id": null,
+          "physical_equipment_id": null,
+          "contradiction_codes": [
+            "COMPETING_INSTALLATIONS"
+          ]
+        }
+      },
+      "interpretation": "The method and scripted review preserve uncertainty and competing evidence."
+    },
+    "C04": {
+      "decisions": {
+        "WO-CLEAN": {
+          "disposition": "accepted_automatic",
+          "accepted_equipment_id": "EQ-TR-NEW-01",
+          "physical_equipment_id": "EQ-TR-NEW-01",
+          "contradiction_codes": []
+        }
+      },
+      "interpretation": "Consistent explicit identity and installation evidence are accepted."
+    },
+    "C05": {
+      "decisions": {
+        "WO-SHARED-ERROR": {
+          "disposition": "accepted_automatic",
+          "accepted_equipment_id": "EQ-SHARED-WRONG",
+          "physical_equipment_id": "EQ-ACTUAL-HIDDEN",
+          "contradiction_codes": []
+        }
+      },
+      "interpretation": "One wrong automatic association is accepted. Agreement among sources cannot establish physical truth when those sources inherit the same error."
+    }
+  }
+}

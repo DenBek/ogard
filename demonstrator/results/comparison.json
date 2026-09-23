@@ -1,0 +1,221 @@
+{
+  "automatic_input_hash": "92aa59ed68f9b6a5f0915163bf67793058fd4c5650c3e01e0047851de3246396",
+  "baseline_automatic": {
+    "counts": {
+      "acceptance_coverage": {
+        "denominator": 6,
+        "numerator": 5
+      },
+      "accepted": 5,
+      "accepted_correct": 3,
+      "accepted_incorrect": 2,
+      "accepted_without_known_truth": 0,
+      "decision_count": 6,
+      "incorrect_among_scorable_accepts": {
+        "denominator": 5,
+        "numerator": 2
+      },
+      "known_truth_count": 5,
+      "rejected": 0,
+      "review_required": 0,
+      "unresolved": 1
+    },
+    "decisions": [
+      {
+        "accepted_equipment_id": "EQ-TR-NEW-01",
+        "accepted_mapping_correct": true,
+        "case_id": "C01",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-TR-NEW-01",
+        "subject_record_id": "EV-WO-2026-0512"
+      },
+      {
+        "accepted_equipment_id": "EQ-TR-OLD-01",
+        "accepted_mapping_correct": false,
+        "case_id": "C01",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-TR-NEW-01",
+        "subject_record_id": "EV-HIST-TX2-OIL"
+      },
+      {
+        "accepted_equipment_id": "EQ-TR-OLD-01",
+        "accepted_mapping_correct": true,
+        "case_id": "C02",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-TR-OLD-01",
+        "subject_record_id": "WO-LATE"
+      },
+      {
+        "accepted_equipment_id": null,
+        "accepted_mapping_correct": null,
+        "case_id": "C03",
+        "disposition": "unresolved",
+        "physical_equipment_id": null,
+        "subject_record_id": "WO-AMBIGUOUS"
+      },
+      {
+        "accepted_equipment_id": "EQ-TR-NEW-01",
+        "accepted_mapping_correct": true,
+        "case_id": "C04",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-TR-NEW-01",
+        "subject_record_id": "WO-CLEAN"
+      },
+      {
+        "accepted_equipment_id": "EQ-SHARED-WRONG",
+        "accepted_mapping_correct": false,
+        "case_id": "C05",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-ACTUAL-HIDDEN",
+        "subject_record_id": "WO-SHARED-ERROR"
+      }
+    ]
+  },
+  "comparison_version": "ogard-comparison-1",
+  "expectations_hash": "c6f8fcbefade62de357c86e76e5bdd50b0bb5f49788656e809059d9a15f55c64",
+  "ogard_automatic": {
+    "counts": {
+      "acceptance_coverage": {
+        "denominator": 6,
+        "numerator": 3
+      },
+      "accepted": 3,
+      "accepted_correct": 2,
+      "accepted_incorrect": 1,
+      "accepted_without_known_truth": 0,
+      "decision_count": 6,
+      "incorrect_among_scorable_accepts": {
+        "denominator": 3,
+        "numerator": 1
+      },
+      "known_truth_count": 5,
+      "rejected": 0,
+      "review_required": 3,
+      "unresolved": 0
+    },
+    "decisions": [
+      {
+        "accepted_equipment_id": null,
+        "accepted_mapping_correct": null,
+        "case_id": "C01",
+        "disposition": "review_required",
+        "physical_equipment_id": "EQ-TR-NEW-01",
+        "subject_record_id": "EV-WO-2026-0512"
+      },
+      {
+        "accepted_equipment_id": null,
+        "accepted_mapping_correct": null,
+        "case_id": "C01",
+        "disposition": "review_required",
+        "physical_equipment_id": "EQ-TR-NEW-01",
+        "subject_record_id": "EV-HIST-TX2-OIL"
+      },
+      {
+        "accepted_equipment_id": "EQ-TR-OLD-01",
+        "accepted_mapping_correct": true,
+        "case_id": "C02",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-TR-OLD-01",
+        "subject_record_id": "WO-LATE"
+      },
+      {
+        "accepted_equipment_id": null,
+        "accepted_mapping_correct": null,
+        "case_id": "C03",
+        "disposition": "review_required",
+        "physical_equipment_id": null,
+        "subject_record_id": "WO-AMBIGUOUS"
+      },
+      {
+        "accepted_equipment_id": "EQ-TR-NEW-01",
+        "accepted_mapping_correct": true,
+        "case_id": "C04",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-TR-NEW-01",
+        "subject_record_id": "WO-CLEAN"
+      },
+      {
+        "accepted_equipment_id": "EQ-SHARED-WRONG",
+        "accepted_mapping_correct": false,
+        "case_id": "C05",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-ACTUAL-HIDDEN",
+        "subject_record_id": "WO-SHARED-ERROR"
+      }
+    ]
+  },
+  "ogard_with_scripted_review": {
+    "counts": {
+      "acceptance_coverage": {
+        "denominator": 6,
+        "numerator": 4
+      },
+      "accepted": 4,
+      "accepted_correct": 3,
+      "accepted_incorrect": 1,
+      "accepted_without_known_truth": 0,
+      "decision_count": 6,
+      "incorrect_among_scorable_accepts": {
+        "denominator": 4,
+        "numerator": 1
+      },
+      "known_truth_count": 5,
+      "rejected": 0,
+      "review_required": 1,
+      "unresolved": 1
+    },
+    "decisions": [
+      {
+        "accepted_equipment_id": "EQ-TR-NEW-01",
+        "accepted_mapping_correct": true,
+        "case_id": "C01",
+        "disposition": "accepted_review",
+        "physical_equipment_id": "EQ-TR-NEW-01",
+        "subject_record_id": "EV-WO-2026-0512"
+      },
+      {
+        "accepted_equipment_id": null,
+        "accepted_mapping_correct": null,
+        "case_id": "C01",
+        "disposition": "review_required",
+        "physical_equipment_id": "EQ-TR-NEW-01",
+        "subject_record_id": "EV-HIST-TX2-OIL"
+      },
+      {
+        "accepted_equipment_id": "EQ-TR-OLD-01",
+        "accepted_mapping_correct": true,
+        "case_id": "C02",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-TR-OLD-01",
+        "subject_record_id": "WO-LATE"
+      },
+      {
+        "accepted_equipment_id": null,
+        "accepted_mapping_correct": null,
+        "case_id": "C03",
+        "disposition": "unresolved",
+        "physical_equipment_id": null,
+        "subject_record_id": "WO-AMBIGUOUS"
+      },
+      {
+        "accepted_equipment_id": "EQ-TR-NEW-01",
+        "accepted_mapping_correct": true,
+        "case_id": "C04",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-TR-NEW-01",
+        "subject_record_id": "WO-CLEAN"
+      },
+      {
+        "accepted_equipment_id": "EQ-SHARED-WRONG",
+        "accepted_mapping_correct": false,
+        "case_id": "C05",
+        "disposition": "accepted_automatic",
+        "physical_equipment_id": "EQ-ACTUAL-HIDDEN",
+        "subject_record_id": "WO-SHARED-ERROR"
+      }
+    ]
+  },
+  "review_policy": "Automatic comparison excludes all scripted review events from both methods.",
+  "scope": "Five selected synthetic cases; no population accuracy or operational benefit is estimated.",
+  "unknown_truth_policy": "Unaccepted records are not counted as correct matches. Accepted records with no truth label are reported separately."
+}

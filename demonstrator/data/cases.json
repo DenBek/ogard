@@ -1,0 +1,222 @@
+{
+  "schema_version": "ogard-demo-source-1",
+  "data_classification": "entirely_synthetic",
+  "profile": {
+    "installation_intervals": "start inclusive, end exclusive; explicit timezone-aware timestamps",
+    "missing_physical_identifier": "requires asset review even when one time-valid candidate exists",
+    "review_mode": "scripted synthetic events, not actual expert review"
+  },
+  "cases": [
+    {
+      "case_id": "C01",
+      "title": "Replacement: accepted work order, unresolved telemetry",
+      "description": "A work order omits the serial number. The new installation record supports a candidate, a scripted asset reviewer accepts it, and a historian link still naming the former unit remains disputed.",
+      "records": [
+        {
+          "record_id": "EV-WO-2026-0512",
+          "type": "work_order",
+          "source_system": "synthetic_cmms",
+          "received_at": "2026-05-12T10:02:15Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": null,
+          "event_at": "2026-05-12T09:20:00Z"
+        },
+        {
+          "record_id": "EV-INST-OLD",
+          "type": "installation",
+          "source_system": "synthetic_installation_history",
+          "received_at": "2026-05-12T10:02:25Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-TR-OLD-01",
+          "valid_from": "2020-03-01T00:00:00Z",
+          "valid_to": "2026-04-15T00:00:00Z"
+        },
+        {
+          "record_id": "EV-INST-NEW",
+          "type": "installation",
+          "source_system": "synthetic_installation_history",
+          "received_at": "2026-05-12T10:02:30Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-TR-NEW-01",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "record_id": "EV-HIST-TX2-OIL",
+          "type": "telemetry_link",
+          "source_system": "synthetic_historian",
+          "received_at": "2026-05-12T10:02:35Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-TR-OLD-01",
+          "event_at": "2026-05-12T09:15:00Z"
+        },
+        {
+          "record_id": "RA-WO-2026-0512",
+          "type": "review",
+          "source_system": "synthetic_review_log",
+          "received_at": "2026-05-12T10:20:00Z",
+          "subject_record_id": "EV-WO-2026-0512",
+          "actor": "SCRIPTED_REVIEWER_01",
+          "role": "asset_reviewer",
+          "action": "accept",
+          "equipment_id": "EQ-TR-NEW-01",
+          "reason": "The dated installation evidence supports the replacement unit for this work-order event.",
+          "evidence_ids": [
+            "EV-WO-2026-0512",
+            "EV-INST-NEW"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C02",
+      "title": "A late record belongs to the former transformer",
+      "description": "A work order received in May describes an April 10 event. Its physical identifier and the installation history agree on the former transformer, although another unit is now installed.",
+      "records": [
+        {
+          "record_id": "EV-INST-OLD",
+          "type": "installation",
+          "source_system": "synthetic_installation_history",
+          "received_at": "2026-05-12T10:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-TR-OLD-01",
+          "valid_from": "2020-03-01T00:00:00Z",
+          "valid_to": "2026-04-15T00:00:00Z"
+        },
+        {
+          "record_id": "EV-INST-NEW",
+          "type": "installation",
+          "source_system": "synthetic_installation_history",
+          "received_at": "2026-05-12T10:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-TR-NEW-01",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "record_id": "WO-LATE",
+          "type": "work_order",
+          "source_system": "synthetic_cmms",
+          "received_at": "2026-05-13T12:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-TR-OLD-01",
+          "event_at": "2026-04-10T09:00:00Z"
+        }
+      ]
+    },
+    {
+      "case_id": "C03",
+      "title": "Competing histories remain unresolved",
+      "description": "Two source systems name different installed units for the same location and time. The work order has no equipment identifier. A scripted reviewer defers resolution while retaining both accounts.",
+      "records": [
+        {
+          "record_id": "INST-A",
+          "type": "installation",
+          "source_system": "synthetic_system_a",
+          "received_at": "2026-05-12T10:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-CANDIDATE-A",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "record_id": "INST-B",
+          "type": "installation",
+          "source_system": "synthetic_system_b",
+          "received_at": "2026-05-12T10:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-CANDIDATE-B",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "record_id": "WO-AMBIGUOUS",
+          "type": "work_order",
+          "source_system": "synthetic_cmms",
+          "received_at": "2026-05-12T10:02:15Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": null,
+          "event_at": "2026-05-12T09:00:00Z"
+        },
+        {
+          "record_id": "REVIEW-DEFER",
+          "type": "review",
+          "source_system": "synthetic_review_log",
+          "received_at": "2026-05-12T10:30:00Z",
+          "subject_record_id": "WO-AMBIGUOUS",
+          "actor": "SCRIPTED_REVIEWER_01",
+          "role": "asset_reviewer",
+          "action": "defer",
+          "reason": "The available records do not establish which installation history is correct.",
+          "evidence_ids": [
+            "WO-AMBIGUOUS",
+            "INST-A",
+            "INST-B"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "C04",
+      "title": "A supported identifier is accepted automatically",
+      "description": "A clean work order names the equipment shown by the installation history at the event time. This control case checks that consistent evidence can be used without unnecessary review.",
+      "records": [
+        {
+          "record_id": "EV-INST-OLD",
+          "type": "installation",
+          "source_system": "synthetic_installation_history",
+          "received_at": "2026-05-12T10:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-TR-OLD-01",
+          "valid_from": "2020-03-01T00:00:00Z",
+          "valid_to": "2026-04-15T00:00:00Z"
+        },
+        {
+          "record_id": "EV-INST-NEW",
+          "type": "installation",
+          "source_system": "synthetic_installation_history",
+          "received_at": "2026-05-12T10:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-TR-NEW-01",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "record_id": "WO-CLEAN",
+          "type": "work_order",
+          "source_system": "synthetic_cmms",
+          "received_at": "2026-05-12T10:02:15Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-TR-NEW-01",
+          "event_at": "2026-05-12T09:00:00Z"
+        }
+      ]
+    },
+    {
+      "case_id": "C05",
+      "title": "Known limitation: several sources repeat the same wrong identity",
+      "description": "An installation record and work order inherit the same incorrect upstream equipment identifier. With no contradictory input, the implementation accepts that association. A separate synthetic truth label identifies the error.",
+      "records": [
+        {
+          "record_id": "INST-SHARED-ERROR",
+          "type": "installation",
+          "source_system": "synthetic_register_copy",
+          "received_at": "2026-05-12T10:00:00Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-SHARED-WRONG",
+          "valid_from": "2026-04-15T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "record_id": "WO-SHARED-ERROR",
+          "type": "work_order",
+          "source_system": "synthetic_cmms",
+          "received_at": "2026-05-12T10:02:15Z",
+          "location_id": "FL-NE-SUB114-TX02",
+          "equipment_id": "EQ-SHARED-WRONG",
+          "event_at": "2026-05-12T09:00:00Z"
+        }
+      ]
+    }
+  ]
+}

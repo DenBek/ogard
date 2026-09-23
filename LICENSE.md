@@ -1,6 +1,6 @@
 # Licensing
 
-OGARD uses a scoped license model so that technical documentation and original website code are clearly distinguished.
+OGARD uses a scoped license model for documentation, synthetic records, executable software and website code.
 
 | Material | License |
 | --- | --- |
@@ -8,6 +8,8 @@ OGARD uses a scoped license model so that technical documentation and original w
 | Architecture diagrams | CC BY 4.0 |
 | Structured synthetic examples and reference JSON artifacts | CC BY 4.0 |
 | Original HTML, CSS, JavaScript, and deployment files | Apache License 2.0 |
+| Original Python implementation, tests, adapters, evaluator and validation scripts | Apache License 2.0 |
+| Generated decision records, evaluation data and explanatory report content | CC BY 4.0 |
 
 ## Attribution
 

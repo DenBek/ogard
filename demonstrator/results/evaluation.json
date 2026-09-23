@@ -1,0 +1,169 @@
+{
+  "all_workflow_checks_passed": true,
+  "automatic_accepts": 3,
+  "case_count": 5,
+  "cases": [
+    {
+      "accepted_mapping_truth_checks": [
+        {
+          "accepted_equipment_id": "EQ-TR-NEW-01",
+          "agrees_with_hidden_truth": true,
+          "hidden_physical_equipment_id": "EQ-TR-NEW-01",
+          "mode": "accepted_review",
+          "subject_record_id": "EV-WO-2026-0512"
+        }
+      ],
+      "all_workflow_checks_passed": true,
+      "case_id": "C01",
+      "checks": [
+        {
+          "name": "decision_inventory",
+          "passed": true
+        },
+        {
+          "name": "declared_behavior:EV-WO-2026-0512",
+          "passed": true
+        },
+        {
+          "name": "declared_behavior:EV-HIST-TX2-OIL",
+          "passed": true
+        },
+        {
+          "name": "input_accounting",
+          "passed": true
+        },
+        {
+          "name": "audit_integrity_and_evidence_availability",
+          "passed": true
+        }
+      ],
+      "interpretation": "The scripted work-order acceptance leaves the historian conflict unresolved."
+    },
+    {
+      "accepted_mapping_truth_checks": [
+        {
+          "accepted_equipment_id": "EQ-TR-OLD-01",
+          "agrees_with_hidden_truth": true,
+          "hidden_physical_equipment_id": "EQ-TR-OLD-01",
+          "mode": "accepted_automatic",
+          "subject_record_id": "WO-LATE"
+        }
+      ],
+      "all_workflow_checks_passed": true,
+      "case_id": "C02",
+      "checks": [
+        {
+          "name": "decision_inventory",
+          "passed": true
+        },
+        {
+          "name": "declared_behavior:WO-LATE",
+          "passed": true
+        },
+        {
+          "name": "input_accounting",
+          "passed": true
+        },
+        {
+          "name": "audit_integrity_and_evidence_availability",
+          "passed": true
+        }
+      ],
+      "interpretation": "The late work order attaches to the former unit using event time."
+    },
+    {
+      "accepted_mapping_truth_checks": [],
+      "all_workflow_checks_passed": true,
+      "case_id": "C03",
+      "checks": [
+        {
+          "name": "decision_inventory",
+          "passed": true
+        },
+        {
+          "name": "declared_behavior:WO-AMBIGUOUS",
+          "passed": true
+        },
+        {
+          "name": "input_accounting",
+          "passed": true
+        },
+        {
+          "name": "audit_integrity_and_evidence_availability",
+          "passed": true
+        }
+      ],
+      "interpretation": "The method and scripted review preserve uncertainty and competing evidence."
+    },
+    {
+      "accepted_mapping_truth_checks": [
+        {
+          "accepted_equipment_id": "EQ-TR-NEW-01",
+          "agrees_with_hidden_truth": true,
+          "hidden_physical_equipment_id": "EQ-TR-NEW-01",
+          "mode": "accepted_automatic",
+          "subject_record_id": "WO-CLEAN"
+        }
+      ],
+      "all_workflow_checks_passed": true,
+      "case_id": "C04",
+      "checks": [
+        {
+          "name": "decision_inventory",
+          "passed": true
+        },
+        {
+          "name": "declared_behavior:WO-CLEAN",
+          "passed": true
+        },
+        {
+          "name": "input_accounting",
+          "passed": true
+        },
+        {
+          "name": "audit_integrity_and_evidence_availability",
+          "passed": true
+        }
+      ],
+      "interpretation": "Consistent explicit identity and installation evidence are accepted."
+    },
+    {
+      "accepted_mapping_truth_checks": [
+        {
+          "accepted_equipment_id": "EQ-SHARED-WRONG",
+          "agrees_with_hidden_truth": false,
+          "hidden_physical_equipment_id": "EQ-ACTUAL-HIDDEN",
+          "mode": "accepted_automatic",
+          "subject_record_id": "WO-SHARED-ERROR"
+        }
+      ],
+      "all_workflow_checks_passed": true,
+      "case_id": "C05",
+      "checks": [
+        {
+          "name": "decision_inventory",
+          "passed": true
+        },
+        {
+          "name": "declared_behavior:WO-SHARED-ERROR",
+          "passed": true
+        },
+        {
+          "name": "input_accounting",
+          "passed": true
+        },
+        {
+          "name": "audit_integrity_and_evidence_availability",
+          "passed": true
+        }
+      ],
+      "interpretation": "One wrong automatic association is accepted. Agreement among sources cannot establish physical truth when those sources inherit the same error."
+    }
+  ],
+  "evaluation_version": "ogard-demo-evaluator-1",
+  "expectations_hash": "c6f8fcbefade62de357c86e76e5bdd50b0bb5f49788656e809059d9a15f55c64",
+  "incorrect_automatic_accepts": 1,
+  "independent_reproduction": "not_performed",
+  "interpretation": "Selected illustrative cases, not a representative benchmark. The shared-source error counts as an incorrect automatic acceptance even though it is the expected limitation of the workflow.",
+  "scripted_review_accepts": 1
+}

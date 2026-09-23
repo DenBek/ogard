@@ -1,0 +1,10 @@
+{
+  "canonical_input_hash": "62497927829fd566eb29f0270fa19716f55f8f4a0f97d873d41426f0f9fc225f",
+  "decisions_identical": true,
+  "inputs_identical": true,
+  "layout_b_input_hash": "958e572014549d85ee2811b473bec44b99709c1c3040deda11d5d062bc998daf",
+  "mapping_hash": "9eea63e24be0c08c5d5c2fb056b332311832a4c946333ae3b6a1900f927b4569",
+  "mapping_version": "ogard-layout-b-map-1",
+  "normalized_input_hash": "62497927829fd566eb29f0270fa19716f55f8f4a0f97d873d41426f0f9fc225f",
+  "scope": "Two synthetic source layouts of the same five scenarios; no real operator integration is claimed."
+}

@@ -1,0 +1,38 @@
+test_baseline_preserves_ambiguity_and_ignores_scripted_reviews (test_release.ReleaseTests.test_baseline_preserves_ambiguity_and_ignores_scripted_reviews) ... ok
+test_comparison_rejects_different_processing_inputs (test_release.ReleaseTests.test_comparison_rejects_different_processing_inputs) ... ok
+test_comparison_rejects_review_credit_in_automatic_results (test_release.ReleaseTests.test_comparison_rejects_review_credit_in_automatic_results) ... ok
+test_comparison_requires_every_decision (test_release.ReleaseTests.test_comparison_requires_every_decision) ... ok
+test_duplicate_json_keys_are_rejected (test_release.ReleaseTests.test_duplicate_json_keys_are_rejected) ... ok
+test_empty_interval_end_is_rejected (test_release.ReleaseTests.test_empty_interval_end_is_rejected) ... ok
+test_invalid_record_shapes_are_rejected (test_release.ReleaseTests.test_invalid_record_shapes_are_rejected) ... ok
+test_invalid_review_evidence_is_rejected (test_release.ReleaseTests.test_invalid_review_evidence_is_rejected) ... ok
+test_known_error_and_abstentions_have_separate_metrics (test_release.ReleaseTests.test_known_error_and_abstentions_have_separate_metrics) ... ok
+test_late_missing_identifier_exposes_candidate_time_difference (test_release.ReleaseTests.test_late_missing_identifier_exposes_candidate_time_difference) ... ok
+test_mapping_rejects_field_overwrite (test_release.ReleaseTests.test_mapping_rejects_field_overwrite) ... ok
+test_mapping_rejects_unapproved_identifier (test_release.ReleaseTests.test_mapping_rejects_unapproved_identifier) ... ok
+test_mapping_rejects_unmapped_field (test_release.ReleaseTests.test_mapping_rejects_unmapped_field) ... ok
+test_relabeling_case_does_not_change_reconciliation (test_release.ReleaseTests.test_relabeling_case_does_not_change_reconciliation) ... ok
+test_second_layout_preserves_all_inputs_and_outputs (test_release.ReleaseTests.test_second_layout_preserves_all_inputs_and_outputs) ... ok
+test_truth_changes_evaluation_but_not_processing (test_release.ReleaseTests.test_truth_changes_evaluation_but_not_processing) ... ok
+test_unknown_truth_is_not_counted_as_correct_or_wrong (test_release.ReleaseTests.test_unknown_truth_is_not_counted_as_correct_or_wrong) ... ok
+test_unsupported_input_schema_is_rejected (test_release.ReleaseTests.test_unsupported_input_schema_is_rejected) ... ok
+test_all_inputs_are_accounted_for_and_declared_checks_pass (test_workflow.WorkflowTests.test_all_inputs_are_accounted_for_and_declared_checks_pass) ... ok
+test_competing_histories_do_not_force_match (test_workflow.WorkflowTests.test_competing_histories_do_not_force_match) ... ok
+test_evaluation_detects_modified_audit (test_workflow.WorkflowTests.test_evaluation_detects_modified_audit) ... ok
+test_exact_replacement_boundary_is_new_installation (test_workflow.WorkflowTests.test_exact_replacement_boundary_is_new_installation) ... ok
+test_input_is_preserved_and_execution_is_deterministic (test_workflow.WorkflowTests.test_input_is_preserved_and_execution_is_deterministic) ... ok
+test_invalid_identifiers_and_timestamps_fail_explicitly (test_workflow.WorkflowTests.test_invalid_identifiers_and_timestamps_fail_explicitly) ... ok
+test_late_arrival_uses_event_time (test_workflow.WorkflowTests.test_late_arrival_uses_event_time) ... ok
+test_later_conflicting_evidence_reopens_review (test_workflow.WorkflowTests.test_later_conflicting_evidence_reopens_review) ... ok
+test_no_future_evidence_in_earlier_decision (test_workflow.WorkflowTests.test_no_future_evidence_in_earlier_decision) ... ok
+test_original_review_preserves_telemetry_conflict (test_workflow.WorkflowTests.test_original_review_preserves_telemetry_conflict) ... ok
+test_review_cannot_accept_unsupported_equipment (test_workflow.WorkflowTests.test_review_cannot_accept_unsupported_equipment) ... ok
+test_review_cannot_cite_future_evidence (test_workflow.WorkflowTests.test_review_cannot_cite_future_evidence) ... ok
+test_shared_error_is_counted_as_wrong_automatic_accept (test_workflow.WorkflowTests.test_shared_error_is_counted_as_wrong_automatic_accept) ... ok
+test_timezone_equivalent_boundary (test_workflow.WorkflowTests.test_timezone_equivalent_boundary) ... ok
+test_wrong_review_role_is_rejected (test_workflow.WorkflowTests.test_wrong_review_role_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.031s
+
+OK
