@@ -1,28 +1,28 @@
 {
   "dependencies": "Python standard library only",
-  "executed_at_utc": "2026-09-24T01:45:55.543136+00:00",
+  "executed_at_utc": "2026-09-24T02:20:57.922256+00:00",
   "execution_kind": "automated_validation",
   "independent_external_review": "outside_scope_of_automated_run",
   "output_sha256": {
-    "adaptation.json": "031641cae4b5610d3cea475a4665558c950f55bf3891c19e191086646fea0c93",
+    "adaptation.json": "f8288e2c8619c3c89ac7cdb1a64b28b7236a23e9c7e0449c625f1e9618bd76ff",
     "automatic_decisions.json": "3b6e5b45689258bca5726104a289d54a5f0703b73e0c0334f5e8374ca5be4bed",
     "baseline_decisions.json": "e2fc503497c81b881ee2d839236c394003bdad1881e69f10602d1820b458ac03",
-    "comparison.json": "626f5902108f1b0bd626d9c0c8dd74ac1047cfd2d7c8f629a53eb20ffa54a05a",
-    "comparison.md": "96a281b8d9df762ef90d8a6ad429f9a0c370e24a812db85d60d84e54b5161afd",
+    "comparison.json": "eb6612c1a2acc646532aa3fef31fa942d5fa5b0f13b49afb7ab45633a42790e3",
+    "comparison.md": "ae3f1d027b9899bf29eff8ee3fbedd35495fbeedddebd7fc112be3a5affc0405",
     "decisions.json": "d0c827a3fa52f77827c3a4e7d36e3ce97a17dacb952be70d29d75ecc6cc103c9",
     "evaluation.json": "c7db4809d3130e41e5284da92ea5e8caf78fd8a6a7fa4c4d47464a8b5c1fc2c7",
     "layout_b_normalized.json": "b70b9e948fffac47a41d88304b3d8d2349d1fca665634e2c5f3302892ffa47b3",
     "validation_summary.json": "773c86a823e6c40c3f2eeac46cb4c922838fefa0c2062629033651d0735b02d8",
-    "walkthrough.html": "16e767046c2195e54aec24998d534115ab4e70a2e7a09e814d154198e4730c09"
+    "walkthrough.html": "9358ab9331e36ef2978798b6fca9df5673ec031ad150bf39cd8a8a634948020f"
   },
   "package_version": "0.2.1",
   "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
   "python": "3.12.14",
-  "source_inventory_sha256": "a702140772182a93c73cd09a236441f6bf7b6c1825c314cb97c2c7d5b72823ad",
+  "source_inventory_sha256": "be8221f468aa5596465297f56802cd5f745fed071041157ef35210fe9195f587",
   "source_sha256": {
-    "PROVENANCE.md": "6050b71381f1acb9842bf4f43cb482cc3e3c3eb53000eb4106ce312d4d9c0cea",
+    "PROVENANCE.md": "b3d21f8e44e749b5bc2106f4f6112eda1d319128119d92191b38345948695c53",
     "README.md": "8dd99b2b98b5d29590123db04f14f3024f2868fd8278436c442b9e30302d3245",
-    "REVIEW_GUIDE.md": "e8f3a46e40df7179ad9ce37bb7fb3689076b0c9c8d45a75c703af5aad4e1f093",
+    "REVIEW_GUIDE.md": "da7965302b44b253bb3cd392175896e1ee5a3275d8a14cb8f6332839c30fbe1d",
     "data/cases.json": "fe9d79fc519aade4d960e8d250b2e9605911fe0f9d676bf48c2f4c6534a6bda7",
     "data/layout-b-mapping.json": "141ee03906cfcf4591085137f1c20f2d2a07db7d267d855610cfad06743a8dca",
     "data/layout-b.json": "70964eea930e6c204356a5204b9d61c5ea26e25e6a5faeb1f152652a5bb65a88",
@@ -31,15 +31,15 @@
     "ogard_demo/__main__.py": "9dc1f90975fe28cdfa330d9bef9c558ec8e9f5c6af104e15fa1fc8b19b0ffc53",
     "ogard_demo/adapters.py": "2a4c3532b542e80518336163e8df5db477de8df5af560f318ac2468c4ebdddd6",
     "ogard_demo/baseline.py": "3eabec1da27c8da2c5866e8f57367996e8c2df4278c9f3367256780fd555a5fe",
-    "ogard_demo/comparison.py": "f0ddb718ea87ba7f254508609ec3f562de660b4f25e6052b3a7acd5e5133a537",
+    "ogard_demo/comparison.py": "45d58b879195d25d8d8ced2f4529309e688f51cd0735af652bb742b692e4bdb0",
     "ogard_demo/engine.py": "035840464865dd900c4d0d403aebca9fa6705ed293632bb7a410f12e8ecc611d",
     "ogard_demo/evaluate.py": "cff97f2deb6a466314d0c732a5d2e2fa12a2db0620404a7a827e8e20795d1fef",
     "ogard_demo/io.py": "dd7a7a36022ed5cf15df57253404888f51ecb10c375ec2a2c2824e2b8cd88634",
-    "ogard_demo/report.py": "bb76831b37e4b59086653df895e6388638be7c26b99db4d073c80d8be10b9ed4",
+    "ogard_demo/report.py": "7bc26266c859ca0a769c49bd3d2e72f8b1dfb0f30f27a8018660d400a2ccaaad",
     "provenance/original-baseline.json": "34c3c2c080af1458ce9a8ae4b3c15af148b855720bbd53fa43955165edcfec60",
-    "run_demo.py": "88fbe99559e16a0a3db7aa9691d3ca8b6eccdc7f6b194ccc5501639f69c17baa",
+    "run_demo.py": "b7ad4e26b4c66c772fcda81f8f7248e7913b73a4897bdb9cee54e030422fe9e3",
     "tests/test_release.py": "0c4c8f3722f48b5590095a7e257a37a7358bee6c0bc98d4ed9c8af0861d95ec2",
     "tests/test_workflow.py": "9bb35af890d6c312707f6727ce835153abc311e33216d0954c6414b90f7a22f7"
   },
-  "test_transcript_sha256": "141abc7a02201ed966df355d263112175f1e66b36b4154bc0b0275a9c6df598c"
+  "test_transcript_sha256": "750f79e658444eb4e4af4f5633305d7da2cc364126fbffd544c8fc31fb11b6eb"
 }

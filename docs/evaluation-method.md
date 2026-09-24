@@ -4,13 +4,13 @@ Processing and evaluation answer different questions. Regression checks test spe
 
 ## Frozen inputs and labels
 
-The five source cases are in `demonstrator/data/cases.json`. Workflow expectations and physical-truth labels are in `demonstrator/evaluation/expectations.json`. The evaluator reads finalized processing outputs before comparing them with labels. Neither the engine, input adapter nor baseline reads evaluation labels. Labels are withheld from processing, not secret from repository readers, and they are not a statistically independent holdout dataset.
+The five source cases are in `demonstrator/data/cases.json`. Workflow expectations and physical-truth labels are in `demonstrator/evaluation/expectations.json`. The evaluator reads finalized processing outputs before comparing them with labels. Neither the engine, input adapter nor baseline reads evaluation labels. Labels are published for inspection and withheld from processing. They belong to the selected examples; a statistically independent holdout dataset is a separate evaluation requirement.
 
 One decision, the competing-installation case, has no single physical-truth label. The other five do. Unaccepted decisions do not count as correct matches. An accepted decision without a known truth label is reported separately and is excluded from the correct/incorrect accepted-link denominator.
 
 ## Baseline
 
-The explicit-ID-or-current-location baseline accepts an explicit equipment identifier without historical corroboration. If that identifier is absent, it uses a unique installation active at the record's receipt time. Multiple or missing candidates remain unresolved. It preserves ambiguity instead of arbitrarily choosing a candidate. It is a simple documented comparator, not a claim about every incumbent utility process or commercial tool.
+The explicit-ID-or-current-location baseline accepts an explicit equipment identifier without historical corroboration. If that identifier is absent, it uses a unique installation active at the record's receipt time. Multiple or missing candidates remain unresolved. It preserves ambiguity instead of arbitrarily choosing a candidate. It is a defined comparator for these cases. Comparisons with other utility processes or products require their own implementations and evaluation design.
 
 Both automatic methods receive exactly the same source document with scripted review events removed. Both process sources in receipt order and use only the available evidence. The source fingerprint must match. The baseline revisits records as installation evidence arrives, just as the OGARD automatic run can. Its installation lookup uses the subject record's receipt time; OGARD uses event time and corroborates explicit identity.
 

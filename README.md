@@ -29,7 +29,7 @@ Use `python3` where appropriate. The command verifies the regression suite, both
 
 Five selected synthetic cases produce six decisions. The baseline automatically accepts five links, including two incorrect ones. OGARD automatically accepts three, including one incorrect one, and refers three to review. Scripted review is reported separately. [Inspect the complete comparison](demonstrator/results/comparison.md).
 
-These counts illustrate specified behavior and a retained shared-source-error limitation. They do not estimate utility-data accuracy, operational benefit or adoption. See the [implemented scope](docs/implementation-scope.md).
+These counts illustrate specified behavior and a retained shared-source-error limitation. Utility-data accuracy, operational benefit and adoption require separate operator-based evaluation. See the [implemented scope](docs/implementation-scope.md).
 
 ## Repository contents
 
@@ -44,7 +44,7 @@ These counts illustrate specified behavior and a retained shared-source-error li
 | `assets/` and root HTML | Static GitHub Pages website, including the implementation page |
 | `release-manifest.json` and `SHA256SUMS.txt` | Versioned inventory and file integrity checks |
 
-The original papers cover a broader program, including similarity methods and derived statuses. The current software scope is stated separately; release 0.2.1 does not claim completion of that broader design or the full benchmark plan.
+The papers cover a broader program, including similarity methods and derived statuses. Release 0.2.1 implements the defined identity and review workflow; the remaining design capabilities and full benchmark form the development program.
 
 ## Document set
 
@@ -61,4 +61,4 @@ Bektas, D. (2026). *OGARD: Open Grid Asset Reliability Data Framework*. Executab
 
 Original executable and website code is Apache-2.0. Documentation, diagrams and structured synthetic data are CC-BY-4.0. See [LICENSE.md](LICENSE.md) and [development provenance](demonstrator/PROVENANCE.md).
 
-Use [GitHub Issues](https://github.com/DenBek/ogard/issues) for reproducible technical feedback. Do not post confidential employer, client or utility information.
+Use [GitHub Issues](https://github.com/DenBek/ogard/issues) for reproducible technical feedback. Use material you are authorized to share publicly.

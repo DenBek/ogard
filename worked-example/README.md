@@ -19,7 +19,7 @@ The synthetic authorized reviewer accepts the replacement unit using the work-or
 - `mapping-decision.json`: deterministic location decision and review-routed equipment candidate
 - `review-action.json`: authorized synthetic review outcome
 - `contradiction.json`: stale telemetry-to-equipment relationship
-- `derived-status.json`: controlled `Unknown` outcome and non-claim
+- `derived-status.json`: controlled `Unknown` outcome and interpretation
 - `illustrative-rules.json`: non-production illustrative rules
 - `audit-log.json`: traceable record sequence
 

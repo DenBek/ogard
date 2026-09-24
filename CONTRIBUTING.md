@@ -23,4 +23,4 @@ OGARD welcomes focused technical feedback on the published methodology and artif
 
 Identify the exact document or artifact version, the relevant section or field, the technical observation, and a proposed correction where possible.
 
-Submissions may be discussed, revised, declined, or deferred. Opening an issue does not transfer authorship of OGARD or establish endorsement of the framework.
+Submissions are reviewed against the project scope, supporting evidence and applicable licenses. Accepted changes are recorded in version history.

@@ -2,6 +2,8 @@
 
 ## 0.2.1 - 24 September 2026
 
+- Corrected companion-paper references to public edition v0.1.1 and refreshed PDF properties. Edited repeated disclaimers into direct scope descriptions, retained evaluation requirements, and used title-first external references. The public paper package contains PDFs only.
+
 - Issued public-edition v0.1.1 papers with public repository links, accurate edition dates and current licensing. Removed the empty archival-identifier field.
 - Made the revised whitepaper manuscript dated 16 September 2026 canonical, replacing the August manuscript in the current paper set. The original draft remains dated August; the public edition is dated 24 September.
 - Companion papers: status updated; content unchanged. The benchmark front matter now points to the selected synthetic results first released in 0.2.0, separately from the full benchmark plan.
@@ -16,7 +18,7 @@
 - Kept the shared-source identity error visible as an incorrect automatic acceptance.
 - Added one-command release verification, regression coverage, output snapshots, fingerprints and GitHub validation.
 - Aligned the website, README, citation, license scope and release inventory; retained the four original version 0.1 methodology PDFs with their original labels.
-- Added complete reproduction instructions and a recorded validation procedure. This validation record covers automated checks; expert assessments are documented separately with their own scope and reviewed version. No operator deployment is claimed.
+- Added complete reproduction instructions and a recorded validation procedure. This validation record covers automated checks; expert assessments are documented separately with their own scope and reviewed version. Operator deployment is evaluated separately.
 
 
 ## Draft Release Candidate v0.1, website integration - August 2026

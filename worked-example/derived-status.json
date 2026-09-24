@@ -16,7 +16,7 @@
     "CON-TELEM-STALE-001"
   ],
   "review_state": "requires_operator_resolution",
-  "non_claim": "This synthetic status is an evidence-governance outcome. It is not a determination that the transformer is physically unavailable, degraded, or at risk.",
+  "non_claim": "This synthetic status records the state of the supporting evidence. Physical condition requires a separate operator assessment.",
   "model_profile_version": "ogard-model-profile-v0.1",
   "schema_version": "0.1"
 }

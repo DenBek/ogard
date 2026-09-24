@@ -11,9 +11,9 @@ All four papers are public edition v0.1.1, issued on 24 September 2026 in [the p
 | Architecture and Data Model Specification | August 2026, Batch 2 v0.1 | v0.1.1, 24 September 2026 |
 | Synthetic Benchmark Methodology and Validation Plan | August 2026, Batch 2 v0.1 | v0.1.1, 24 September 2026 |
 
-The canonical whitepaper is the full September 16 manuscript, extracted from the author’s whitepaper-and-companion volume. Selected companion excerpts at the end of that volume are distributed here as their separate full papers. The whitepaper’s technical sections, references and appendices are preserved. The public edition updates front matter, authorship wording and edition history.
+The canonical whitepaper is the full September 16 manuscript, extracted from the author’s whitepaper-and-companion volume. Selected companion excerpts at the end of that volume are distributed here as their separate full papers. The public edition retains the September manuscript’s technical framework and includes editorial updates to references, scope wording and publication metadata.
 
-For the three companion papers: status updated; content unchanged. Editorial metadata, running headers and edition histories identify the public edition. The benchmark front matter links to the selected synthetic results first released in 0.2.0; this does not claim completion of its broader benchmark protocol.
+The companion papers retain their technical design and evaluation requirements. Publication metadata, references and scope descriptions have received editorial corrections. The benchmark front matter links to the selected synthetic results first released in 0.2.0; full execution of its broader protocol remains a separate evaluation stage.
 
 Historical draft statuses in the change histories describe those earlier editions. Earlier paper files remain available in Git history. Current covers use the repository URL as the publication location and contain no unassigned DOI field.
 

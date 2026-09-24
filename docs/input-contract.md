@@ -16,7 +16,7 @@ The canonical JSON document has `schema_version: ogard-demo-source-1`, a `data_c
 | `telemetry_link` | `location_id`, `event_at` | `equipment_id`, null or omitted when missing |
 | `review` | `subject_record_id`, `actor`, `role`, `action`, `reason`, `evidence_ids` | `equipment_id`, required for acceptance |
 
-Identifiers and source names are non-empty strings; record identifiers are unique within a case. `evidence_ids` is a non-empty array of distinct record identifiers. Duplicate JSON object keys, invalid record types, missing required values and malformed timestamps fail explicitly. The runner stops rather than dropping invalid records silently. This package uses a validated JSON contract; it does not claim general JSON Schema conformance.
+Identifiers and source names are non-empty strings; record identifiers are unique within a case. `evidence_ids` is a non-empty array of distinct record identifiers. Duplicate JSON object keys, invalid record types, missing required values and malformed timestamps fail explicitly. The runner stops rather than dropping invalid records silently. This package validates its documented JSON contract directly. Formal JSON Schema validation is a separate capability.
 
 ## Time and arrival order
 

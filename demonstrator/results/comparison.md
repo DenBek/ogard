@@ -1,6 +1,6 @@
 # OGARD synthetic comparison results
 
-Five selected synthetic cases; no population accuracy or operational benefit is estimated.
+Five selected synthetic cases; population accuracy and operational benefit require separate evaluation.
 
 The baseline accepts an explicit equipment identifier directly. If it is missing, it uses a unique installation at the record's receipt time. Ambiguous or missing installations remain unresolved. OGARD corroborates explicit identity at event time and routes missing identifiers or conflicts to review.
 
@@ -41,4 +41,4 @@ The scripted review accepts one work-order association and defers one competing-
 
 ## Interpretation
 
-These author-selected synthetic examples illustrate behavior and a known failure. Their small size and selection do not support a utility-data accuracy estimate, superiority over other reconciliation products, outage reduction, adoption or production readiness.
+These selected synthetic examples illustrate behavior and a known failure. Utility-data accuracy, comparisons with other products, outage reduction, adoption and production readiness require representative data and their own evaluation designs.

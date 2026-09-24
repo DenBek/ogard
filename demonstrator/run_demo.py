@@ -61,7 +61,7 @@ def run(out):
     adaptation = {"mapping_version": mapping["mapping_version"], "layout_b_input_hash": digest(alternate),
                   "mapping_hash": digest(mapping), "normalized_input_hash": digest(normalized),
                   "canonical_input_hash": digest(inputs), "inputs_identical": True, "decisions_identical": True,
-                  "scope": "Two synthetic source layouts of the same five scenarios; no real operator integration is claimed."}
+                  "scope": "Two synthetic source layouts of the same five scenarios; operator integration requires deployment-specific evaluation."}
     summary = {"release_version": __version__, "tests_passed": int(count.group(1)), "tests_failed": 0,
                "case_count": len(inputs["cases"]), "decision_count": sum(len(c["decisions"]) for c in decisions["cases"]),
                "workflow_checks_passed": True, "source_layouts_verified": 2,

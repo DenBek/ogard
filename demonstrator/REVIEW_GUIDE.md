@@ -1,6 +1,6 @@
 # Reproduce and inspect OGARD
 
-This guide covers executable release 0.2.1. It provides a complete procedure; it contains no prewritten endorsement or unsigned attestation. A fresh technical run can establish reproducibility, while a domain assessment separately addresses the workflow's realism and usefulness.
+This guide covers executable release 0.2.1. It provides a complete reproduction procedure and a structure for reporting findings. A fresh technical run can establish reproducibility, while a domain assessment separately addresses the workflow's realism and usefulness.
 
 ## Reproduce a fixed source revision
 
@@ -26,7 +26,7 @@ Inspect `adaptation.json` and `layout_b_normalized.json` to confirm the alternat
 
 Retain the generated output directory and the exact source revision. In the reviewer's own record, identify the commands actually run, interpreter and operating system, matching or differing results, inspected files, modifications made, and the technical conclusions the reviewer can personally support. Describe technical reproduction separately from electricity-network experience or an assessment of operational usefulness.
 
-The generated `run_manifest.json` and `release_validation.json` already contain completed execution facts and fingerprints. They do not name or authenticate the person operating the computer. Any signed assessment must come from the reviewer. Running the package alone does not establish operator adoption or measured operational outcomes.
+The generated `run_manifest.json` and `release_validation.json` already contain completed execution facts and fingerprints. They record the automated execution. The reviewer supplies their identity, assessment and signature separately. Operator adoption and operational outcomes require evidence from the relevant deployment.
 
 ## Scope of an assessment
 

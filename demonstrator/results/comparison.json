@@ -216,6 +216,6 @@
     ]
   },
   "review_policy": "Automatic comparison excludes all scripted review events from both methods.",
-  "scope": "Five selected synthetic cases; no population accuracy or operational benefit is estimated.",
+  "scope": "Five selected synthetic cases; population accuracy and operational benefit require separate evaluation.",
   "unknown_truth_policy": "Unaccepted records are not counted as correct matches. Accepted records with no truth label are reported separately."
 }

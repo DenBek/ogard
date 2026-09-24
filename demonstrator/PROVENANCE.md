@@ -4,7 +4,7 @@ Underlying OGARD methodology, architecture and original synthetic transformer ex
 
 The separately retained `OGARD_Initial_Demonstrator_v0_1.zip` contained working package 0.1.0-demo.1. Its original engine, cases, evaluator, tests and reporting structure form the basis of release 0.2.0. `provenance/original-baseline.json` records the archive fingerprint, a successful rerun of its 15 tests, and exact reproduction of its three saved deterministic outputs before integration.
 
-Authored by Deniz Bektas. This development record documents implementation and automated validation. Separately documented expert assessments have their own scope and reviewed version. Synthetic review actors are scripted records, not the identities or assessments of any real reviewer.
+Authored by Deniz Bektas. This development record documents implementation and automated validation. Separately documented expert assessments have their own scope and reviewed version. Synthetic review actors are scripted records for the demonstration.
 
 ## Original example projection
 
@@ -16,7 +16,7 @@ The original reference example includes an illustrative similarity score and a d
 
 This release integrates the existing software into the public source tree, tightens malformed-input checks, adds a second synthetic source layout and explicit mapping, implements an explicit-ID-or-current-location baseline, separates automatic comparisons from scripted review, and produces reproducible comparison records. The runner verifies inputs and outputs and records content fingerprints. Documentation, licensing and website navigation identify the executable scope separately from the original design papers.
 
-The five original scenarios and separate truth labels are retained. The shared-source identity error remains an incorrect automatic acceptance. Changes do not insert hidden truth into the processor or force perfect results. The implementation and examples contain no employer or client code, confidential records, live credentials or operator configurations.
+The five original scenarios and separate truth labels are retained. The shared-source identity error remains an incorrect automatic acceptance. Evaluation labels are read after processing, so the shared-source error remains observable in the results. The implementation uses original code, synthetic records and public reference material.
 
 ## Release 0.2.1 corrections
 

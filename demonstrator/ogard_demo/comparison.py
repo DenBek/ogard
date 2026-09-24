@@ -57,7 +57,7 @@ def compare(automatic, baseline, reviewed, expected):
             "automatic_input_hash": automatic["input_hash"],
             "baseline_automatic": score(baseline, expected), "ogard_automatic": score(automatic, expected),
             "ogard_with_scripted_review": score(reviewed, expected),
-            "scope": "Five selected synthetic cases; no population accuracy or operational benefit is estimated.",
+            "scope": "Five selected synthetic cases; population accuracy and operational benefit require separate evaluation.",
             "unknown_truth_policy": "Unaccepted records are not counted as correct matches. Accepted records with no truth label are reported separately.",
             "review_policy": "Automatic comparison excludes all scripted review events from both methods."}
 
@@ -95,5 +95,5 @@ def render_markdown(comparison):
             cells.append(cell)
         lines.append("| " + " / ".join(key) + " | " + " | ".join(cells) + " |")
     lines.extend(["", "## Interpretation", "",
-                  "These author-selected synthetic examples illustrate behavior and a known failure. Their small size and selection do not support a utility-data accuracy estimate, superiority over other reconciliation products, outage reduction, adoption or production readiness.", ""])
+                  "These selected synthetic examples illustrate behavior and a known failure. Utility-data accuracy, comparisons with other products, outage reduction, adoption and production readiness require representative data and their own evaluation designs.", ""])
     return "\n".join(lines)

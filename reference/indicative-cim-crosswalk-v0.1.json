@@ -1,7 +1,7 @@
 {
   "crosswalk_id": "ogard-indicative-cim-crosswalk-v0.1",
   "status": "non_normative_incomplete",
-  "claim_boundary": "This crosswalk does not establish formal CIM equivalence, profile conformance, compliance, or certification.",
+  "claim_boundary": "This crosswalk provides mapping guidance. Formal CIM equivalence and conformance require a complete profile and conformance assessment.",
   "mappings": [
     {
       "ogard_concept": "CanonicalAsset",

@@ -26,4 +26,4 @@ The GitHub validation workflow runs this same command against the event's exact 
 
 ## Interpretation
 
-Passing software and reproducibility checks establishes the behavior and repeatability of this defined reference implementation. The known synthetic identity error remains visible; these checks do not establish production performance or operator adoption. Expert assessments are documented separately and apply to their stated scope and reviewed version. The validation field `independent_external_review: outside_scope_of_automated_run` describes the automated run, without assessing separately documented reviews.
+Passing software and reproducibility checks establishes the behavior and repeatability of this defined reference implementation. The known synthetic identity error remains visible. Production performance and adoption are evaluated separately in the operator environment. Expert assessments are documented separately and apply to their stated scope and reviewed version. The validation field `independent_external_review: outside_scope_of_automated_run` identifies the scope of the automated run.
