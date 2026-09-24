@@ -2,6 +2,8 @@
 
 ## 0.2.1 - 24 September 2026
 
+- Linked the whitepaper and benchmark to the repository's supporting results, standardized results links on the v0.2.1 release tag, and clarified the electricity-network equipment scope in citation metadata and keywords.
+
 - Corrected companion-paper references to public edition v0.1.1 and refreshed PDF properties. Edited repeated disclaimers into direct scope descriptions, retained evaluation requirements, and used title-first external references. The public paper package contains PDFs only.
 
 - Issued public-edition v0.1.1 papers with public repository links, accurate edition dates and current licensing. Removed the empty archival-identifier field.

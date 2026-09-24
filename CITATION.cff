@@ -11,6 +11,15 @@ url: "https://denbek.github.io/ogard/"
 repository-code: "https://github.com/DenBek/ogard"
 license: Apache-2.0
 abstract: >-
-  An executable reference implementation for evidence-preserving transformer
-  identity reconciliation with installation intervals, review records,
-  two synthetic source layouts, and reproducible evaluation.
+  Executable reference implementation of OGARD, a method for reconciling
+  electricity-network equipment records (maintenance work orders, installation
+  history and telemetry associations) while preserving source evidence, time
+  validity and review decisions. Includes five synthetic power-transformer
+  scenarios, two input layouts, a baseline comparison and one-command validation.
+keywords:
+  - electricity grid
+  - asset data
+  - record linkage
+  - data engineering
+  - power transformers
+  - provenance
