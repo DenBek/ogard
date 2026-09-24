@@ -4,14 +4,14 @@
 
 OGARD provides a reusable methodology and executable reference implementation for reconciling electricity-network equipment records across maintenance, installation history and telemetry associations. It preserves evidence, time validity, conflicting accounts and review decisions.
 
-**Current release:** 0.2.0 - executable transformer reference implementation
+**Current release:** 0.2.1 - executable transformer reference implementation
 **Author:** Deniz Bektas
 **Website:** https://denbek.github.io/ogard/
 **Repository:** https://github.com/DenBek/ogard
 
 ## Run and verify
 
-Python 3.12 or later is sufficient. No third-party packages, credentials or cloud services are required. From the repository root:
+Python 3.10 or later is sufficient. No third-party packages, credentials or cloud services are required. From the repository root:
 
 ```sh
 python run_validation.py --output ../ogard-rerun --verify-snapshot
@@ -37,14 +37,14 @@ These counts illustrate specified behavior and a retained shared-source-error li
 | --- | --- |
 | `demonstrator/` | Executable code, inputs, mappings, labels, tests, results and reviewer instructions |
 | `docs/` | Input contract, scope, evaluation method and release validation record |
-| `papers/` | Four original version 0.1 methodology and design PDFs |
+| `papers/` | Four public-edition v0.1.1 PDFs and their editable sources |
 | `diagrams/` | System context, logical architecture and entity relationships |
 | `worked-example/` | Original non-executable transformer design example |
 | `reference/` | Contradiction taxonomy, indicative CIM crosswalk and broader scenario catalogue |
 | `assets/` and root HTML | Static GitHub Pages website, including the implementation page |
 | `release-manifest.json` and `SHA256SUMS.txt` | Versioned inventory and file integrity checks |
 
-The original papers cover a broader program, including similarity methods and derived statuses. The current software scope is stated separately; release 0.2.0 does not claim completion of that broader design or the full benchmark plan.
+The original papers cover a broader program, including similarity methods and derived statuses. The current software scope is stated separately; release 0.2.1 does not claim completion of that broader design or the full benchmark plan.
 
 ## Document set
 
@@ -53,11 +53,11 @@ The original papers cover a broader program, including similarity methods and de
 3. Architecture and Data Model Specification.
 4. Synthetic Benchmark Methodology and Validation Plan.
 
-All four PDFs retain their original version 0.1 labels. Current executable results are in `demonstrator/results/`, not retroactively attributed to those original papers.
+All four papers are public edition v0.1.1, issued on 24 September 2026. The canonical whitepaper uses the revised manuscript dated 16 September 2026; the original draft dates to August 2026. Companion technical content remains the August v0.1 content, with publication metadata corrected. See [paper editions](papers/README.md) for the exact source and citation history. Current executable results are in `demonstrator/results/`; the benchmark methodology links separately to the selected results first released in 0.2.0.
 
 ## Citation and reuse
 
-Bektas, D. (2026). *OGARD: Open Grid Asset Reliability Data Framework*. Executable Reference Release 0.2.0. https://github.com/DenBek/ogard
+Bektas, D. (2026). *OGARD: Open Grid Asset Reliability Data Framework*. Executable Reference Release 0.2.1. https://github.com/DenBek/ogard
 
 Original executable and website code is Apache-2.0. Documentation, diagrams and structured synthetic data are CC-BY-4.0. See [LICENSE.md](LICENSE.md) and [development provenance](demonstrator/PROVENANCE.md).
 

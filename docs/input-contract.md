@@ -1,6 +1,6 @@
 # Input contract
 
-This contract describes the executable reference implementation in release 0.2.0. All supplied data are synthetic. The processing code uses explicit approved identifiers and installation intervals.
+This contract describes the executable reference implementation in release 0.2.1. All supplied data are synthetic. The processing code uses explicit approved identifiers and installation intervals.
 
 ## Source groups and structure
 

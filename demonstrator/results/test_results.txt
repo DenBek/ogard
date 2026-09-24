@@ -33,6 +33,6 @@ test_timezone_equivalent_boundary (test_workflow.WorkflowTests.test_timezone_equ
 test_wrong_review_role_is_rejected (test_workflow.WorkflowTests.test_wrong_review_role_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 33 tests in 0.031s
+Ran 33 tests in 0.039s
 
 OK

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1 - 24 September 2026
+
+- Issued public-edition v0.1.1 papers with public repository links, accurate edition dates and current licensing. Removed the empty archival-identifier field.
+- Made the revised whitepaper manuscript dated 16 September 2026 canonical, replacing the August manuscript in the current paper set. The original draft remains dated August; the public edition is dated 24 September.
+- Companion papers: status updated; content unchanged. The benchmark front matter now points to the selected synthetic results first released in 0.2.0, separately from the full benchmark plan.
+- Clarified authorship and removed named reviewers from synthetic-actor provenance. Automated validation wording now identifies its scope separately from documented expert assessments.
+- Lowered the Python minimum to 3.10 and added a 3.10/3.11/3.12 validation matrix. Regenerated output records, source fingerprints and release checksums. Processing rules, inputs, truth labels and decision counts are unchanged.
+
 ## 0.2.0 - 23 September 2026
 
 - Integrated the original executable transformer demonstrator after reproducing its 15 tests and saved deterministic outputs.
@@ -8,9 +16,8 @@
 - Kept the shared-source identity error visible as an incorrect automatic acceptance.
 - Added one-command release verification, regression coverage, output snapshots, fingerprints and GitHub validation.
 - Aligned the website, README, citation, license scope and release inventory; retained the four original version 0.1 methodology PDFs with their original labels.
-- Added complete reproduction instructions and a recorded validation procedure. No independent external assessment or operator deployment is claimed by this release.
+- Added complete reproduction instructions and a recorded validation procedure. This validation record covers automated checks; expert assessments are documented separately with their own scope and reviewed version. No operator deployment is claimed.
 
-# Change Log
 
 ## Draft Release Candidate v0.1, website integration - August 2026
 

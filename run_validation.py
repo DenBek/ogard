@@ -93,8 +93,8 @@ def main():
     parser.add_argument("--output", type=Path, default=ROOT.parent / "ogard-validation")
     parser.add_argument("--verify-snapshot", action="store_true")
     args = parser.parse_args()
-    if sys.version_info < (3, 12):
-        raise SystemExit("Python 3.12 or later is required")
+    if sys.version_info < (3, 10):
+        raise SystemExit("Python 3.10 or later is required")
     out = args.output.resolve()
     if ROOT == out or ROOT in out.parents:
         raise SystemExit("Choose an output directory outside the repository to preserve the supplied release")
@@ -121,7 +121,7 @@ def main():
               "source_layouts_verified": summary["source_layouts_verified"],
               "deterministic_outputs_verified": snapshot_count, "release_files_checksum_verified": checksum_count,
               "snapshot_verification_requested": args.verify_snapshot, "website": links,
-              "independent_external_review": "not_established_by_this_run"}
+              "independent_external_review": "outside_scope_of_automated_run"}
     (out / "release_validation.json").write_text(json.dumps(record, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(record, indent=2))
 

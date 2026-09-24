@@ -1,6 +1,6 @@
 # Reproduce and inspect OGARD
 
-This guide covers executable release 0.2.0. It provides a complete procedure; it contains no prewritten endorsement or unsigned attestation. A fresh technical run can establish reproducibility, while a domain assessment separately addresses the workflow's realism and usefulness.
+This guide covers executable release 0.2.1. It provides a complete procedure; it contains no prewritten endorsement or unsigned attestation. A fresh technical run can establish reproducibility, while a domain assessment separately addresses the workflow's realism and usefulness.
 
 ## Reproduce a fixed source revision
 
@@ -14,7 +14,7 @@ python run_validation.py --output ../ogard-review --verify-snapshot
 
 A downloaded ZIP does not contain Git metadata. In that case, retain the exact commit URL from which it was downloaded and the source inventory fingerprint in the run manifest.
 
-Python 3.12 or later is sufficient. For an isolated environment, create a virtual environment with `python -m venv ../ogard-review-env` and use its Python interpreter. No packages need installation. The root command runs all tests and verifies the results, website links and checksum inventory. Exit code zero and `all_checks_passed: true` in `release_validation.json` mean those automated gates completed successfully.
+Python 3.10 or later is sufficient. For an isolated environment, create a virtual environment with `python -m venv ../ogard-review-env` and use its Python interpreter. No packages need installation. The root command runs all tests and verifies the results, website links and checksum inventory. Exit code zero and `all_checks_passed: true` in `release_validation.json` mean those automated gates completed successfully.
 
 ## Inspect the evidence
 
