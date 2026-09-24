@@ -1,6 +1,6 @@
 # Release validation record
 
-Release 0.2.0 integrates the original transformer demonstrator and provides an executable source package, two input layouts, a baseline comparison and complete reproduction instructions.
+Release 0.2.1 integrates the original transformer demonstrator and provides an executable source package, two input layouts, a baseline comparison and complete reproduction instructions.
 
 ## Completed software checks
 
@@ -12,7 +12,7 @@ The second source layout normalizes to the same canonical input and produces ide
 
 ## Reproducibility and integrity
 
-The root validation command reproduces ten deterministic outputs and compares them with the supplied snapshots. Source fingerprints verify that the saved run used the current implementation and documentation. The checksum inventory covers the packaged source, website, records and original PDFs. Local website references and HTML fragment destinations are checked automatically.
+The root validation command reproduces ten deterministic outputs and compares them with the supplied snapshots. Source fingerprints verify that the saved run used the current implementation and documentation. The checksum inventory covers the packaged source, website, records and public-edition PDFs. Local website references and HTML fragment destinations are checked automatically.
 
 Use this exact command from the repository root:
 
@@ -22,8 +22,8 @@ python run_validation.py --output ../ogard-rerun --verify-snapshot
 
 A successful run writes `release_validation.json` with the completed gate results and `run_manifest.json` with runtime information and source/output fingerprints. The saved test transcript is in `demonstrator/results/test_results.txt`. Runtime timestamps, platform strings and test durations are intentionally not required to match across machines.
 
-The GitHub validation workflow runs this same command against the event's exact source revision, using read-only repository permissions. Its result is recorded by GitHub separately from the source release.
+The GitHub validation workflow runs this same command against the event's exact source revision, using Python 3.10, 3.11 and 3.12 and read-only repository permissions. Its result is recorded by GitHub separately from the source release.
 
 ## Interpretation
 
-Passing software and reproducibility checks establishes the behavior and repeatability of this defined reference implementation. It does not erase the known synthetic identity error or establish external expert review, production performance or operator adoption. Real reviewer assessments must identify the source revision and the work personally performed by that reviewer.
+Passing software and reproducibility checks establishes the behavior and repeatability of this defined reference implementation. The known synthetic identity error remains visible; these checks do not establish production performance or operator adoption. Expert assessments are documented separately and apply to their stated scope and reviewed version. The validation field `independent_external_review: outside_scope_of_automated_run` describes the automated run, without assessing separately documented reviews.

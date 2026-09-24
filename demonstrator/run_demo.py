@@ -65,7 +65,7 @@ def run(out):
     summary = {"release_version": __version__, "tests_passed": int(count.group(1)), "tests_failed": 0,
                "case_count": len(inputs["cases"]), "decision_count": sum(len(c["decisions"]) for c in decisions["cases"]),
                "workflow_checks_passed": True, "source_layouts_verified": 2,
-               "independent_external_review": "not_established_by_this_run",
+               "independent_external_review": "outside_scope_of_automated_run",
                "baseline_automatic": comparison["baseline_automatic"]["counts"],
                "ogard_automatic": comparison["ogard_automatic"]["counts"],
                "ogard_with_scripted_review": comparison["ogard_with_scripted_review"]["counts"]}
@@ -82,7 +82,7 @@ def run(out):
     hashes = {str(p.relative_to(ROOT)): sha(p) for p in source_files}
     manifest = {"package_version": __version__, "executed_at_utc": datetime.now(timezone.utc).isoformat(),
                 "python": platform.python_version(), "platform": platform.platform(),
-                "execution_kind": "automated_validation", "independent_external_review": "not_established_by_this_run",
+                "execution_kind": "automated_validation", "independent_external_review": "outside_scope_of_automated_run",
                 "dependencies": "Python standard library only", "source_inventory_sha256": digest(hashes),
                 "source_sha256": hashes, "output_sha256": {name: sha(out / name) for name in STABLE_OUTPUTS},
                 "test_transcript_sha256": sha(out / "test_results.txt")}

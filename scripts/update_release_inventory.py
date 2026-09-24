@@ -15,14 +15,18 @@ def main():
                     and name not in ('release-manifest.json', 'SHA256SUMS.txt')})
     summary = json.loads((ROOT / 'demonstrator/results/validation_summary.json').read_text(encoding='utf-8'))
     manifest = {
-        'package_name': 'OGARD executable reference implementation', 'version': '0.2.0',
-        'status': 'Executable Reference Release 0.2.0', 'release_date': '2026-09-23',
+        'package_name': 'OGARD executable reference implementation', 'version': '0.2.1',
+        'status': 'Executable Reference Release 0.2.1', 'release_date': '2026-09-24',
         'author': 'Deniz Bektas', 'website': 'https://denbek.github.io/ogard/',
         'repository': 'https://github.com/DenBek/ogard', 'public_release': True,
         'executed_selected_synthetic_results': True, 'full_benchmark_completed': False,
-        'operator_adoption_claimed': False, 'independent_external_review_claimed': False,
+        'operator_adoption_claimed': False, 'external_review_assessment': 'outside_scope_of_automated_run',
         'contains_only_original_synthetic_or_public_material': True,
-        'methodology_documents_version': 'Original Draft Release Candidate v0.1',
+        'methodology_documents_version': 'Public edition v0.1.1 (24 September 2026)',
+        'minimum_python_version': '3.10',
+        'validated_python_versions': ['3.10', '3.11', '3.12'],
+        'whitepaper_manuscript_date': '2026-09-16',
+        'original_draft_date': '2026-08',
         'methodology_documents': sorted(p.name for p in (ROOT / 'papers').glob('*.pdf')),
         'tests_passed': summary['tests_passed'], 'source_layouts_verified': 2,
         'scenario_count': 5, 'decision_count': 6,
@@ -33,7 +37,7 @@ def main():
     entries = files + ['release-manifest.json']
     checksums = ''.join(hashlib.sha256((ROOT/name).read_bytes()).hexdigest()+'  '+name+'\n' for name in sorted(entries))
     (ROOT / 'SHA256SUMS.txt').write_text(checksums, encoding='utf-8')
-    print(json.dumps({'release_version':'0.2.0','checksummed_files':len(entries)}))
+    print(json.dumps({'release_version':'0.2.1','checksummed_files':len(entries)}))
 
 
 if __name__ == '__main__':

@@ -1,10 +1,10 @@
 # OGARD executable reference implementation
 
-Release **0.2.0** connects transformer maintenance and telemetry records to equipment history using explicit identifiers, installation intervals, preserved conflicts and documented review. Five synthetic scenarios produce six equipment-association decisions. Two source layouts exercise the same engine.
+Release **0.2.1** connects transformer maintenance and telemetry records to equipment history using explicit identifiers, installation intervals, preserved conflicts and documented review. Five synthetic scenarios produce six equipment-association decisions. Two source layouts exercise the same engine.
 
 ## Run the complete release
 
-Use Python 3.12 or later. No external packages, cloud accounts or credentials are required. From the repository root:
+Use Python 3.10 or later. No external packages, cloud accounts or credentials are required. From the repository root:
 
 ```sh
 python run_validation.py --output ../ogard-rerun --verify-snapshot

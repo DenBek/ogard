@@ -3,6 +3,7 @@
   "contains_only_original_synthetic_or_public_material": true,
   "decision_count": 6,
   "executed_selected_synthetic_results": true,
+  "external_review_assessment": "outside_scope_of_automated_run",
   "files": [
     ".github/workflows/validate.yml",
     ".gitignore",
@@ -64,10 +65,11 @@
     "framework.html",
     "implementation.html",
     "index.html",
-    "papers/OGARD-Architecture-and-Data-Model-Specification-Draft-RC-v0.1.pdf",
-    "papers/OGARD-Implementation-Guide-Draft-RC-v0.1.pdf",
-    "papers/OGARD-Synthetic-Benchmark-Methodology-Draft-RC-v0.1.pdf",
-    "papers/OGARD-Technical-Whitepaper-Draft-RC-v0.1.pdf",
+    "papers/OGARD-Architecture-and-Data-Model-Specification-Public-Edition-v0.1.1.pdf",
+    "papers/OGARD-Implementation-Guide-Public-Edition-v0.1.1.pdf",
+    "papers/OGARD-Synthetic-Benchmark-Methodology-Public-Edition-v0.1.1.pdf",
+    "papers/OGARD-Technical-Whitepaper-Public-Edition-v0.1.1.pdf",
+    "papers/README.md",
     "publications.html",
     "reference/contradiction-taxonomy-v0.1.json",
     "reference/indicative-cim-crosswalk-v0.1.json",
@@ -88,24 +90,31 @@
     "worked-example/source-records.json"
   ],
   "full_benchmark_completed": false,
-  "independent_external_review_claimed": false,
   "methodology_documents": [
-    "OGARD-Architecture-and-Data-Model-Specification-Draft-RC-v0.1.pdf",
-    "OGARD-Implementation-Guide-Draft-RC-v0.1.pdf",
-    "OGARD-Synthetic-Benchmark-Methodology-Draft-RC-v0.1.pdf",
-    "OGARD-Technical-Whitepaper-Draft-RC-v0.1.pdf"
+    "OGARD-Architecture-and-Data-Model-Specification-Public-Edition-v0.1.1.pdf",
+    "OGARD-Implementation-Guide-Public-Edition-v0.1.1.pdf",
+    "OGARD-Synthetic-Benchmark-Methodology-Public-Edition-v0.1.1.pdf",
+    "OGARD-Technical-Whitepaper-Public-Edition-v0.1.1.pdf"
   ],
-  "methodology_documents_version": "Original Draft Release Candidate v0.1",
+  "methodology_documents_version": "Public edition v0.1.1 (24 September 2026)",
+  "minimum_python_version": "3.10",
   "operator_adoption_claimed": false,
+  "original_draft_date": "2026-08",
   "package_name": "OGARD executable reference implementation",
   "public_release": true,
-  "release_date": "2026-09-23",
+  "release_date": "2026-09-24",
   "repository": "https://github.com/DenBek/ogard",
   "run_command": "python run_validation.py --output ../ogard-rerun --verify-snapshot",
   "scenario_count": 5,
   "source_layouts_verified": 2,
-  "status": "Executable Reference Release 0.2.0",
+  "status": "Executable Reference Release 0.2.1",
   "tests_passed": 33,
-  "version": "0.2.0",
-  "website": "https://denbek.github.io/ogard/"
+  "validated_python_versions": [
+    "3.10",
+    "3.11",
+    "3.12"
+  ],
+  "version": "0.2.1",
+  "website": "https://denbek.github.io/ogard/",
+  "whitepaper_manuscript_date": "2026-09-16"
 }

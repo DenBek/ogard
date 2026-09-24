@@ -4,7 +4,7 @@ Underlying OGARD methodology, architecture and original synthetic transformer ex
 
 The separately retained `OGARD_Initial_Demonstrator_v0_1.zip` contained working package 0.1.0-demo.1. Its original engine, cases, evaluator, tests and reporting structure form the basis of release 0.2.0. `provenance/original-baseline.json` records the archive fingerprint, a successful rerun of its 15 tests, and exact reproduction of its three saved deterministic outputs before integration.
 
-The original working implementation and this integration were prepared with AI assistance in collaboration with Deniz. This development record does not represent independent peer review. Synthetic review actors are scripted records, not the identities or assessments of Morgan Sowden, Apratim Sahay or an electricity-network practitioner.
+Authored by Deniz Bektas. This development record documents implementation and automated validation. Separately documented expert assessments have their own scope and reviewed version. Synthetic review actors are scripted records, not the identities or assessments of any real reviewer.
 
 ## Original example projection
 
@@ -17,3 +17,7 @@ The original reference example includes an illustrative similarity score and a d
 This release integrates the existing software into the public source tree, tightens malformed-input checks, adds a second synthetic source layout and explicit mapping, implements an explicit-ID-or-current-location baseline, separates automatic comparisons from scripted review, and produces reproducible comparison records. The runner verifies inputs and outputs and records content fingerprints. Documentation, licensing and website navigation identify the executable scope separately from the original design papers.
 
 The five original scenarios and separate truth labels are retained. The shared-source identity error remains an incorrect automatic acceptance. Changes do not insert hidden truth into the processor or force perfect results. The implementation and examples contain no employer or client code, confidential records, live credentials or operator configurations.
+
+## Release 0.2.1 corrections
+
+The September 16 whitepaper is the canonical technical manuscript, issued as public edition v0.1.1 on 24 September 2026. Companion papers receive editorial publication-status corrections with technical content unchanged. Python support starts at 3.10; the automated validation record describes its own scope separately from expert assessments. Processing rules, synthetic inputs, truth labels and measured decision counts are unchanged from 0.2.0.
