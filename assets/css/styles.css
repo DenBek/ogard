@@ -160,7 +160,8 @@ details.cite pre { white-space: pre-wrap; }
   @page { margin: 16mm 15mm; }
   body { color: #000000; font-size: 10.5pt; line-height: 1.45; }
   .skip-link, .site-nav, details.cite, .toc, .key-links, .no-print { display: none !important; }
-  a.src::after { content: " (" attr(href) ")"; font-size: 0.9em; word-break: break-all; }
+  a.src::after { content: " (" attr(href) ")"; font-size: 0.9em; overflow-wrap: anywhere; }
+  figcaption a { display: none; }
   .site-header { border-bottom: 1px solid #999999; }
   .site-header .inner, .page, .site-footer .inner { max-width: none; padding-left: 0; padding-right: 0; }
   .page { display: block; padding-top: 1.2rem; padding-bottom: 0; }
