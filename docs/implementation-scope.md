@@ -1,8 +1,8 @@
 # Implemented scope
 
-Release 0.2.1 packages the executable transformer reference implementation and its measured synthetic results. The four public-edition v0.1.1 papers contain the September 16 revised whitepaper and the August companion methodology and design content. The executable capabilities below define the implemented subset of that design.
+Release 0.2.2 packages the executable transformer reference implementation and its measured synthetic results. The four technical papers (version 0.1.2) contain the methodology and design. The executable capabilities below define the implemented subset of that design.
 
-| Capability | Release 0.2.1 behavior |
+| Capability | Release 0.2.2 behavior |
 | --- | --- |
 | Identity and history | Separate location and equipment identifiers; installation intervals resolve event-time candidates |
 | Evidence | Preserve inputs, source identifiers, receipt order and references supporting decisions |
@@ -22,4 +22,4 @@ The shared-source error remains an incorrect automatic acceptance. No contradict
 
 The implementation does not provide similarity scoring, machine learning, derived equipment-condition statuses, sensor analytics, cloud integrations, live reviewer authentication, a production data platform or operational control. The original reference example's score and `Unknown` condition-status fields remain illustrative design records. The executable decisions instead use deterministic rules and association dispositions.
 
-These selected examples demonstrate runnable behavior, transparent comparison and repeatability. Utility-data accuracy, production readiness, outage reduction, adoption and formal CIM conformance require separate operator evaluation or conformance assessment. Expert assessments are documented separately and apply to their stated scope and reviewed version.
+These selected examples demonstrate runnable behavior, transparent comparison and repeatability. Utility-data accuracy, production readiness, outage reduction, adoption and formal CIM conformance require separate operator evaluation or conformance assessment.

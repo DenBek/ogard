@@ -95,7 +95,7 @@
 <section class="section">
   <div class="container">
     <span class="section-label">Five components</span>
-    <h2>The framework at a glance</h2><p>The broader design below includes similarity methods and derived statuses. Release 0.2.1 implements the focused deterministic identity and review workflow described on the <a href="implementation.html">implementation page</a>.</p>
+    <h2>The framework at a glance</h2><p>The broader design below includes similarity methods and derived statuses. Release 0.2.2 implements the focused deterministic identity and review workflow described on the <a href="implementation.html">implementation page</a>.</p>
     <div class="card-grid five">
       <article class="card"><span class="card-number">01</span><h3>Canonical asset and evidence</h3><p>Separates governed asset context from source records and preserves provenance, time, and review state.</p></article>
       <article class="card"><span class="card-number">02</span><h3>Layered architecture</h3><p>Retains raw evidence, makes conformance explicit, and carries lineage into controlled outputs.</p></article>
@@ -127,7 +127,7 @@
       <table>
         <thead><tr><th>Status</th><th>Reference meaning</th><th>Minimum interpretation safeguard</th></tr></thead>
         <tbody>
-          <tr><td><span class="status available">Available</span></td><td>Approved evidence supports expected availability within the defined scope.</td><td>Assessment is limited to the defined evidence. Coverage, freshness and contradictions remain operator-defined; latent defects require separate investigation.</td></tr>
+          <tr><td><span class="status available">Available</span></td><td>Approved evidence supports expected availability within the defined scope, and no unresolved material contradiction blocks the classification.</td><td>Assessment is limited to the defined evidence. Coverage, freshness and contradictions remain operator-defined; latent defects require separate investigation.</td></tr>
           <tr><td><span class="status degraded">Degraded</span></td><td>Approved evidence supports impaired condition or reduced capability under an operator-defined rule.</td><td>Requires asset-class-specific criteria, time validity, and authorized engineering interpretation.</td></tr>
           <tr><td><span class="status offline">Offline</span></td><td>Approved evidence supports that the asset is unavailable, disconnected, or out of service.</td><td>Must distinguish planned, forced, temporary, and data-quality conditions.</td></tr>
           <tr><td><span class="status risk">At risk</span></td><td>Approved evidence indicates a condition requiring attention without supporting Degraded or Offline.</td><td>Must not be presented as failure prediction. Indicators, expiry, and review requirements must be defined.</td></tr>
@@ -166,7 +166,7 @@
       <p>Open Grid Asset Reliability Data Framework</p>
     </div>
     <div>
-      <p><strong>Executable Reference Release 0.2.1</strong></p>
+      <p><strong>Executable Reference Release 0.2.2</strong></p>
       <p>Documentation and diagrams: CC BY 4.0</p>
     </div>
     <div class="footer-links">

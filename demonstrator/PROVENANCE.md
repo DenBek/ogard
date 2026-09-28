@@ -4,7 +4,7 @@ Underlying OGARD methodology, architecture and original synthetic transformer ex
 
 The separately retained `OGARD_Initial_Demonstrator_v0_1.zip` contained working package 0.1.0-demo.1. Its original engine, cases, evaluator, tests and reporting structure form the basis of release 0.2.0. `provenance/original-baseline.json` records the archive fingerprint, a successful rerun of its 15 tests, and exact reproduction of its three saved deterministic outputs before integration.
 
-Authored by Deniz Bektas. This development record documents implementation and automated validation. Separately documented expert assessments have their own scope and reviewed version. Synthetic review actors are scripted records for the demonstration.
+Authored by Deniz Bektas. This development record documents implementation and automated validation. Synthetic review actors are scripted records for the demonstration.
 
 ## Original example projection
 
@@ -20,4 +20,8 @@ The five original scenarios and separate truth labels are retained. The shared-s
 
 ## Release 0.2.1 corrections
 
-The September 16 whitepaper is the canonical technical manuscript, issued as public edition v0.1.1 on 24 September 2026. Companion papers receive editorial publication-status corrections with technical content unchanged. Python support starts at 3.10; the automated validation record describes its own scope separately from expert assessments. Processing rules, synthetic inputs, truth labels and measured decision counts are unchanged from 0.2.0.
+The papers were issued as version 0.1.1 with editorial publication-status corrections; technical content was unchanged. Python support starts at 3.10, and the automated validation record states its own scope. Processing rules, synthetic inputs, truth labels and measured decision counts are unchanged from 0.2.0.
+
+## Release 0.2.2
+
+The four technical papers are version 0.1.2. Processing rules, synthetic inputs, truth labels, tests and decision outputs are identical to 0.2.1. The version label and the walkthrough's scope wording were updated, and the saved results were regenerated to record them.

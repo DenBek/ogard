@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Bektas
     given-names: Deniz
-version: "0.2.1"
-date-released: "2026-09-24"
+version: "0.2.2"
+date-released: "2026-09-28"
 url: "https://denbek.github.io/ogard/"
 repository-code: "https://github.com/DenBek/ogard"
 license: Apache-2.0

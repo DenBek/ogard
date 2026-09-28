@@ -1,6 +1,6 @@
 # Release validation record
 
-Release 0.2.1 integrates the original transformer demonstrator and provides an executable source package, two input layouts, a baseline comparison and complete reproduction instructions.
+Release 0.2.2 contains the original transformer demonstrator, integrated in 0.2.0, and provides an executable source package, two input layouts, a baseline comparison and complete reproduction instructions.
 
 ## Completed software checks
 
@@ -12,7 +12,7 @@ The second source layout normalizes to the same canonical input and produces ide
 
 ## Reproducibility and integrity
 
-The root validation command reproduces ten deterministic outputs and compares them with the supplied snapshots. Source fingerprints verify that the saved run used the current implementation and documentation. The checksum inventory covers the packaged source, website, records and public-edition PDFs. Local website references and HTML fragment destinations are checked automatically.
+The root validation command reproduces ten deterministic outputs and compares them with the supplied snapshots. Source fingerprints verify that the saved run used the current implementation and documentation. The checksum inventory covers the packaged source, website, records and paper PDFs. Local website references and HTML fragment destinations are checked automatically.
 
 Use this exact command from the repository root:
 
@@ -26,4 +26,4 @@ The GitHub validation workflow runs this same command against the event's exact 
 
 ## Interpretation
 
-Passing software and reproducibility checks establishes the behavior and repeatability of this defined reference implementation. The known synthetic identity error remains visible. Production performance and adoption are evaluated separately in the operator environment. Expert assessments are documented separately and apply to their stated scope and reviewed version. The validation field `independent_external_review: outside_scope_of_automated_run` identifies the scope of the automated run.
+Passing software and reproducibility checks establishes the behavior and repeatability of this defined reference implementation. The known synthetic identity error remains visible. Production performance and adoption would require separate evaluation in an operator environment. The validation field `independent_external_review: outside_scope_of_automated_run` identifies the scope of the automated run.

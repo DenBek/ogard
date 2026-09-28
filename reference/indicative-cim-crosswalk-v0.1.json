@@ -5,31 +5,45 @@
   "mappings": [
     {
       "ogard_concept": "CanonicalAsset",
-      "indicative_cim_family": "PowerSystemResource and related asset context"
+      "indicative_cim_family": "PowerSystemResource and related asset context",
+      "relationship": "Provides the governed OGARD context to which evidence is attached.",
+      "limitation": "Not asserted as a direct CIM class equivalence."
     },
     {
       "ogard_concept": "FunctionalLocation",
-      "indicative_cim_family": "Location, EquipmentContainer, and local hierarchy concepts"
+      "indicative_cim_family": "EquipmentContainer hierarchy (for example Substation, VoltageLevel, Bay)",
+      "relationship": "Represents the enduring network role or position.",
+      "limitation": "CIM Location is geographic placement only; utility functional-location semantics vary."
     },
     {
       "ogard_concept": "EquipmentUnit",
-      "indicative_cim_family": "Equipment and Asset-related concepts"
+      "indicative_cim_family": "Asset and asset-information concepts (IEC 61968-11)",
+      "relationship": "Represents the physical installed item and lifecycle identity.",
+      "limitation": "CIM Equipment models the network role, not the physical unit."
     },
     {
       "ogard_concept": "AssetInstallation",
-      "indicative_cim_family": "Time-valid relationship assembled from asset, equipment, and location information"
+      "indicative_cim_family": "Asset–PowerSystemResource association with Asset lifecycle dates",
+      "relationship": "Bridges equipment identity and functional location through time.",
+      "limitation": "OGARD-specific relationship assembled from relevant CIM concepts."
     },
     {
       "ogard_concept": "TelemetryChannel",
-      "indicative_cim_family": "Measurement and MeasurementValue-related concepts"
+      "indicative_cim_family": "Measurement and MeasurementValue-related concepts",
+      "relationship": "Represents the observation channel and its mapping context.",
+      "limitation": "Historian tags and channel lifecycles require local extensions."
     },
     {
       "ogard_concept": "EvidenceRecord",
-      "indicative_cim_family": "No single direct equivalent"
+      "indicative_cim_family": "No single direct equivalent; may reference CIM messages or domain records",
+      "relationship": "Preserves source evidence, provenance, and quality state.",
+      "limitation": "OGARD evidence wrapper extends beyond a semantic equipment model."
     },
     {
       "ogard_concept": "MappingDecision / Contradiction",
-      "indicative_cim_family": "No single direct equivalent"
+      "indicative_cim_family": "No single direct equivalent",
+      "relationship": "Records governance decisions and unresolved disagreement.",
+      "limitation": "OGARD control records defined by this reference model."
     }
   ]
 }

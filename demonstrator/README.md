@@ -1,6 +1,6 @@
 # OGARD executable reference implementation
 
-Release **0.2.1** connects transformer maintenance and telemetry records to equipment history using explicit identifiers, installation intervals, preserved conflicts and documented review. Five synthetic scenarios produce six equipment-association decisions. Two source layouts exercise the same engine.
+Release **0.2.2** connects transformer maintenance and telemetry records to equipment history using explicit identifiers, installation intervals, preserved conflicts and documented review. Five synthetic scenarios produce six equipment-association decisions. Two source layouts exercise the same engine.
 
 ## Run the complete release
 

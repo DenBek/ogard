@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2
+
+- Issued the four technical papers as version 0.1.2: Technical Whitepaper, Implementation Guide, Architecture and Data Model Specification, and Synthetic Benchmark Methodology and Validation Plan. The update corrects wording, version labels and references and makes the four papers consistent with one another, including minimum field lists, requirement levels and the indicative CIM crosswalk. The documents use a new layout. The methodology, model profile and contradiction taxonomy remain version 0.1.
+- Replaced the three architecture diagrams with the version 0.1.2 Specification figures, aligned the indicative CIM crosswalk with Specification Appendix D, and marked the version 0.1 contradiction taxonomy as published.
+- Updated the website, READMEs, documentation, citation metadata and release inventory for the new paper version and release, and aligned their scope wording with the papers.
+- Processing rules, synthetic inputs, truth labels, tests and decision outputs are unchanged from 0.2.1. The version label and the walkthrough's scope wording were updated, and the saved results, source fingerprints and release checksums were regenerated.
+
 ## 0.2.1 - 24 September 2026
 
 - Linked the whitepaper and benchmark to the repository's supporting results, standardized results links on the v0.2.1 release tag, and clarified the electricity-network equipment scope in citation metadata and keywords.
@@ -41,7 +48,7 @@
 - Added scenario provenance and a correlated-source adversarial blind spot.
 - Declared the derived-status evaluation gap and future validation path.
 
-## Draft RC v0.1, Batch 1 review revision
+## Draft RC v0.1, Batch 1 revision
 
 - Reconciled the transformer example around a stale telemetry association to the former equipment unit.
 - Standardized the architecture as four logical layers, with a source boundary and cross-cutting controls.
