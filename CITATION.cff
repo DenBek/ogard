@@ -16,6 +16,8 @@ abstract: >-
   history and telemetry associations) while preserving source evidence, time
   validity and review decisions. Includes five synthetic power-transformer
   scenarios, two input layouts, a baseline comparison and one-command validation.
+  The release also includes the four OGARD technical papers (version 0.1.2),
+  architecture diagrams, reference files and a synthetic worked example.
 keywords:
   - electricity grid
   - asset data
