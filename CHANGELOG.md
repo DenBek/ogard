@@ -5,6 +5,7 @@
 - Issued the four technical papers as version 0.1.2: Technical Whitepaper, Implementation Guide, Architecture and Data Model Specification, and Synthetic Benchmark Methodology and Validation Plan. The update corrects wording, version labels and references and makes the four papers consistent with one another, including minimum field lists, requirement levels and the indicative CIM crosswalk. The documents use a new layout. The methodology, model profile and contradiction taxonomy remain version 0.1.
 - Replaced the three architecture diagrams with the version 0.1.2 Specification figures, aligned the indicative CIM crosswalk with Specification Appendix D, and marked the version 0.1 contradiction taxonomy as published.
 - Updated the website, READMEs, documentation, citation metadata and release inventory for the new paper version and release, and aligned their scope wording with the papers.
+- Redesigned the website in the style of the technical papers: a single readable column, the Specification figures, a publications list with citations and the Zenodo archive identifier, an expanded author page and print-friendly styling. The architecture page is merged into the Framework page, and table header contrast is corrected.
 - Processing rules, synthetic inputs, truth labels, tests and decision outputs are unchanged from 0.2.1. The version label and the walkthrough's scope wording were updated, and the saved results, source fingerprints and release checksums were regenerated.
 
 ## 0.2.1 - 24 September 2026
@@ -16,7 +17,7 @@
 - Issued public-edition v0.1.1 papers with public repository links, accurate edition dates and current licensing. Removed the empty archival-identifier field.
 - Made the revised whitepaper manuscript dated 16 September 2026 canonical, replacing the August manuscript in the current paper set. The original draft remains dated August; the public edition is dated 24 September.
 - Companion papers: status updated; content unchanged. The benchmark front matter now points to the selected synthetic results first released in 0.2.0, separately from the full benchmark plan.
-- Clarified authorship and removed named reviewers from synthetic-actor provenance. Automated validation wording now identifies its scope separately from documented expert assessments.
+- Clarified authorship and synthetic-actor provenance. Automated validation wording now states its own scope.
 - Lowered the Python minimum to 3.10 and added a 3.10/3.11/3.12 validation matrix. Regenerated output records, source fingerprints and release checksums. Processing rules, inputs, truth labels and decision counts are unchanged.
 
 ## 0.2.0 - 23 September 2026
@@ -27,7 +28,7 @@
 - Kept the shared-source identity error visible as an incorrect automatic acceptance.
 - Added one-command release verification, regression coverage, output snapshots, fingerprints and GitHub validation.
 - Aligned the website, README, citation, license scope and release inventory; retained the four original version 0.1 methodology PDFs with their original labels.
-- Added complete reproduction instructions and a recorded validation procedure. This validation record covers automated checks; expert assessments are documented separately with their own scope and reviewed version. Operator deployment is evaluated separately.
+- Added complete reproduction instructions and a recorded validation procedure. This validation record covers automated checks only; independent review and operator deployment are outside its scope.
 
 
 ## Draft Release Candidate v0.1, website integration - August 2026
